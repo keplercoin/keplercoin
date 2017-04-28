@@ -13,7 +13,7 @@
   "customInfo":"请按要求设置一个密码",
   "customInfoRe":"确认这个密码,马上进入帐户",
   "customCopyInfo":"已复制好，可贴粘。",
-  "customPlaceholderInfo":"输入12个单词，之间以空格隔空，不支持汉字和符号",
+  "customPlaceholderInfo":"您的密码长度应该是 12 个字符或更多，最好超过 35 个字符。",
   "Account":"帐户",
   "Asset Distribution":"资产分布",
   "Connected":"已连接",

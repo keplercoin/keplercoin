@@ -77,7 +77,11 @@
                     <a href="javascript:;" class="xiaoc-btn-create" onclick="krs.registerAccount();return false;" data-i18n="CreateAccount">Create Your Account</a>
                     <script>
                         <!--
+<<<<<<< HEAD
                        // canvas();
+=======
+                        // canvas();
+>>>>>>> 90d4e8111790812bfe9c9d3c66b228822739e3b1
 
                         //配置
                         var config = {
@@ -104,6 +108,7 @@
                             if(val.length<1){
                                 return false;
                             }
+<<<<<<< HEAD
                             if(val.split(" ").length==12 && val.indexOf("-")<0){
                                 //密码登陆
                                 console.log("密码登录");
@@ -112,6 +117,16 @@
                                 //帐号登陆
                                 console.log("账号登录");
                                 krs.login(0,val);
+=======
+                            if(val.split("-").length==4 && val.indexOf("KPL")===0){
+                                //帐号登陆
+                                console.log("账号登录");
+                                krs.login(0,val);
+                            }else{
+                                //密码登陆
+                                console.log("密码登录");
+                                krs.login(1,val);
+>>>>>>> 90d4e8111790812bfe9c9d3c66b228822739e3b1
                             }
                         }
                         -->
@@ -200,7 +215,11 @@
                     }
 
                     $("#newPass").bind("input propertychange",function(){
+<<<<<<< HEAD
                         if($.trim($(this).val()).length<32){
+=======
+                        if($.trim($(this).val()).length<12){
+>>>>>>> 90d4e8111790812bfe9c9d3c66b228822739e3b1
                             $("#newLoinBtn").removeClass("disabled").addClass("disabled");
                         }else{
                             $("#newLoinBtn").removeClass("disabled");
@@ -214,26 +233,26 @@
 
             <!--登陆-->
             <div id="login_panel-bak" style="display: none;">
-                <div class="callout callout-danger" id="testnet_login" style="max-width:400px;min-width:400px;display:none;" data-i18n="testnet_login_warning">Log in with your TestNet account - not your real one!</div><div id="login_error" style="max-width:400px;min-width:400px;display:none">                        
-                    <div class="callout callout-danger"></div>
-                </div>
-                
-				<button type="button" id="loginButtons" class="btn btn-primary" data-toggle="button" data-login-type="account" aria-pressed="false" style="min-width:40px;">
-    				<input type="hidden" name="loginType" id="accountLogin" value="account" autocomplete="off" /><i class="fa fa-male"></i>
-				</button>
-				
+                <div class="callout callout-danger" id="testnet_login" style="max-width:400px;min-width:400px;display:none;" data-i18n="testnet_login_warning">Log in with your TestNet account - not your real one!</div><div id="login_error" style="max-width:400px;min-width:400px;display:none">
+                <div class="callout callout-danger"></div>
+            </div>
+
+                <button type="button" id="loginButtons" class="btn btn-primary" data-toggle="button" data-login-type="account" aria-pressed="false" style="min-width:40px;">
+                    <input type="hidden" name="loginType" id="accountLogin" value="account" autocomplete="off" /><i class="fa fa-male"></i>
+                </button>
+
                 <div class="lockscreen-item">
                     <div class="lockscreen-credentials">
-                    	<div class="input-group" id="login_account_container" style="display:table;height:34px;width: 100%;">
+                        <div class="input-group" id="login_account_container" style="display:table;height:34px;width: 100%;">
                             <div class="dropdown" style="width: 100%;">
-							  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" style="width: 100%;">
-								<span data-i18n="select_account_to_login">Select an Account to Login with</span>
-								<span class="caret"></span>
-							  </button>
-							  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" id="login_account">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" style="width: 100%;">
+                                    <span data-i18n="select_account_to_login">Select an Account to Login with</span>
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" id="login_account">
 
-							  </ul>
-							</div>
+                                </ul>
+                            </div>
                         </div>
                         <input type="hidden" name="check_password_length" id="login_check_password_length" value="1" />
                         <div class="input-group" id="login_account_container_other">
@@ -250,7 +269,6 @@
                         </div>
                     </div>
                 </div>
-                			
                 <div id="remember_account_container">
                     <input type="checkbox" name="remember_account" id="remember_account" value="1" /> <span></span><label for="remember_account" data-i18n="remember_account">Remember account on this computer</label>
                 </div>
@@ -261,26 +279,26 @@
                 </div>
 
                 <div id="lockscreen_active_plugins_warning" style="margin-top:7px;display:none;">
-                <div style="display:inline-block;max-width: 400px; min-width: 400px;">
-                    <div style="margin-top:10px;margin-bottom:12px;">
-                        <a href="#" id="lockscreen_active_plugins_overview" class="label label-default" data-content="" data-toggle="popover" data-placement="top" data-i18n="active_plugins">
-                            Active Plugins
-                        </a>&nbsp;
-                        <a href="#" id="lockscreen_active_plugins_security" class="label label-warning" data-content="" data-toggle="popover" data-placement="top" data-i18n="security_notice">
-                            Security Notice
-                        </a>
-                    </div>
-                    <div>
+                    <div style="display:inline-block;max-width: 400px; min-width: 400px;">
+                        <div style="margin-top:10px;margin-bottom:12px;">
+                            <a href="#" id="lockscreen_active_plugins_overview" class="label label-default" data-content="" data-toggle="popover" data-placement="top" data-i18n="active_plugins">
+                                Active Plugins
+                            </a>&nbsp;
+                            <a href="#" id="lockscreen_active_plugins_security" class="label label-warning" data-content="" data-toggle="popover" data-placement="top" data-i18n="security_notice">
+                                Security Notice
+                            </a>
+                        </div>
+                        <div>
                         <span style="color:#fff;opacity:0.96;">
                             <input type="checkbox" name="disable_all_plugins" id="disable_all_plugins"/> <label for="disable_all_plugins" style="font-weight:normal;" data-i18n="disable_plugins">Disable Plugins during Session</label>
                         </span>
+                        </div>
                     </div>
                 </div>
-                </div>
-                
+
                 <div id="registration_link">
                     <a href="#" onclick="krs.registerAccount();" data-i18n="no_account_q_create_account">Don't have an account? Click here to create one!</a>
-                </div> 
+                </div>
             </div>
             <!--欢迎来到KPL->
             <div class="panel panel-default" id="welcome_panel" style="display:none;max-width:500px;">
@@ -298,14 +316,18 @@
                     &nbsp;&nbsp;
                     <button class="btn btn-success" onclick="krs.registerAccount();return false;" data-i18n="new_q_create_account">New? Create Your Account!</button>
                 </div>
+<<<<<<< HEAD
             </div>  
+=======
+            </div>
+>>>>>>> 90d4e8111790812bfe9c9d3c66b228822739e3b1
             <!--创建您的帐户-自定义-->
             <div class="panel panel-default" id="account_phrase_custom_panel" style="display:none;max-width:500px;">
                 <div class="panel-heading"><span class="glyphicon glyphicon-lock"></span> <span data-i18n="create_your_account">Create Your Account</span></div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="post" autocomplete="off">
                         <div class="callout callout-info" style="max-width:500px;" data-i18n="passphrase_length_warning">Your passphrase must be at least 35 characters long.</div>
-                        
+
                         <div class="callout callout-danger" style="word-break:inherit;">
                             <span data-i18n="attention">Attention</span>:<br><br>
                             <span data-i18n="passphrase_warning_unique">
@@ -324,7 +346,7 @@
                             <label for="registration_password_repeat" class="col-sm-3 control-label" data-i18n="repeat">Repeat</label>
                             <div class="col-sm-9"><input type="password" name="registration_password_repeat" class="form-control" id="registration_password_repeat" placeholder="" /></div>
                         </div>
-                        
+
                         <div style="text-align:right">
                             <input type="submit" class="btn btn-primary btn-sm" value="Register" data-i18n="[value]register" />
                             &nbsp;&nbsp;
@@ -340,7 +362,7 @@
                     <!--加载单词列表-->
                     <div id="account_phrase_generator_loading">
                         <p><span class="loading_text" data-i18n="loading_word_list">Loading Word List</span><span class="loading_dots"><span>.</span><span>.</span><span>.</span></span></p>
-                        
+
                         <div style="text-align:center;margin-top:20px;margin-bottom:20px;"><img src="/img/loading_indicator.gif" alt="Loading..." width="32" height="32" /></div>
                     </div>
                     <!--生成您的密码。请稍候-->
@@ -355,7 +377,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div style="text-align:right">
                                 <button class="btn btn-sm btn-default" onclick="krs.showLoginOrWelcomeScreen();return false;" data-i18n="cancel">Cancel</button>
                             </div>
@@ -364,24 +386,23 @@
                         <div class="step_2 account_phrase_generator_steps">
                             <div id="account_phrase_generator_start">
                                 <p><span data-i18n="generating_passphrase_wait">Generating your passphrase. Please wait</span><span class="loading_dots"><span>.</span><span>.</span><span>.</span></span></p>
-                                
+
                                 <div style="text-align:center;margin-top:20px;margin-bottom:20px;"><img src="/img/loading_indicator.gif" alt="Loading..." width="32" height="32" /></div>
                             </div>
-                            
+
                             <div id="account_phrase_generator_stop" style="display:none">
                                 <p data-i18n="automatically_generated_passphrase_is">Your automatically generated passphrase is:</p>
-                                
+
                                 <textarea style="width:100%;height:50px;margin-bottom:10px;padding:3px;" rows="2" readonly></textarea>
-                            
+
                                 <p data-i18n="memorize_passphrase_help">Please write down or memorize these 12 words (their order and capitalization matters - always lowercase). This passphrase is needed in order to access your KPL account.</p>
-                                            
+
                                 <div class="callout callout-danger">
-                                    <strong><span data-i18n="attention">Attention</span></strong>: 
-                                    <span data-i18n="passphrase_warning_disclose">
+                                    <strong><span data-i18n="attention">Attention</span></strong>:
+                                     <span data-i18n="passphrase_warning_disclose">
                                         Don't ever disclose your passphrase. If you lose it you lose access to your account!
                                     </span>
                                 </div>
-                            
                                 <div style="text-align:right">
                                     <input type="submit" class="btn btn-primary btn-sm" value="Next" data-i18n="[value]next" onclick="$('.step_2').hide();$('.step_3').show();return false;" />
                                     &nbsp;&nbsp;
@@ -392,11 +413,8 @@
                         <!--您的密码是非常重要的 ！为确保您已保存它，请写下下面的密码-->
                         <div class="step_3 account_phrase_generator_steps">
                             <p data-i18n="passphrase_write_below">Your passphrase is very important! In order to be sure that you have saved it, please write your passphrase below:</p>
-                            
-                            <div class="callout callout-danger" style="display:none" data-i18n="incorrectly_typed_passphrase">You have not typed the passphrase correctly, please try again!</div>
-
-                            <textarea style="width:100%;height:50px;margin-bottom:10px;" rows="2"></textarea>
-                            
+                             <div class="callout callout-danger" style="display:none" data-i18n="incorrectly_typed_passphrase">You have not typed the passphrase correctly, please try again!</div>
+                             <textarea style="width:100%;height:50px;margin-bottom:10px;" rows="2"></textarea>
                             <div style="text-align:right">
                                 <input type="submit" class="btn btn-primary btn-sm" value="Next" data-i18n="[value]next" onclick="krs.verifyGeneratedPassphrase();return false;" />
                                 &nbsp;&nbsp;
@@ -405,7 +423,7 @@
                         </div>
                     </div>
                 </div>
-            </div>  
+            </div> 
             <!--想选择您自己的密码？请单击此处-->
             <div id="custom_passphrase_link" style="margin-top:30px;margin-bottom:20px;text-align:center;display:none;">
                 <a href="#" onclick="krs.registerUserDefinedAccount();" data-i18n="choose_own_passphrase">Want to choose your own passphrase? Click here.</a>
