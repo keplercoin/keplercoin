@@ -1,5 +1,5 @@
 #!/bin/sh
-CP="/lib/*:classes"
+CP="/lib/*"
 SP=src/java/
 
 /bin/rm -f kpl.jar

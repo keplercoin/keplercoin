@@ -26,21 +26,21 @@ body {
   -webkit-font-smoothing: antialiased;
   min-height: 100%;
   background: #2e2712;
-  color: black !important;
+  color: #b4e3f9 !important;
 }
 html.lockscreen, html.lockscreen body {
   height:100%;
   overflow-x:auto;
 }
 a {
-  color: #bd9400;
+  color: #17b3f9;
 }
 a:hover,
 a:active,
 a:focus {
   outline: none;
   text-decoration: none;
-  color: #d1a400;
+
 }
 /* Layouts */
 .wrapper {
@@ -70,7 +70,7 @@ body > .header {
 }
 /*right side - contins main content*/
 .right-side {
-  background-color: #2e2712;
+  background-color:#14262b;
   margin-left: 220px;
 }
 /*left side - contains sidebar*/
@@ -134,7 +134,7 @@ body.fixed .wrapper {
 /* Content */
 .content {
   padding: 20px; /*wesley*/
-  background: #2E2712;
+  background: #14262b;
 }
 /* Utility */
 /* H1 - H6 font */
@@ -456,7 +456,7 @@ body > .header .logo .icon {
 .right-side > .page > .content-header > h1 {
   margin: 0;
   font-size: 24px;
-  color: #bd9400;
+  color: #17b3f9;
 }
 .right-side > .page > .content-header > h1 > small {
   font-size: 15px;
@@ -1372,21 +1372,21 @@ body > .header .logo .icon {
 */
 .box {
   position: relative;
-  background: #3a331e;
-  border: 4px solid #a98301;
+  background: #14262b;
+  border: 4px solid #144454;
   margin-bottom: 20px!important;
   border-radius: 4px;
   width: 100%;
   padding: 10px;
 }
 .box.box-primary {
-  border-top-color: #a98301;
+  border-top-color: #144454;
 }
 .box.box-info {
-  border-top-color: #00c0ef;
+  border-top-color: #144454;
 }
 .box.box-danger {
-  border-top-color: #f56954;
+  border-top-color: #144454;
 }
 .box.box-warning {
   border-top-color: #f39c12;
@@ -1400,7 +1400,7 @@ body > .header .logo .icon {
 }
 .box .box-header {
   position: relative;
-  color: #bd9400;
+  color: #16b3f9;
 }
 .box .box-header:before,
 .box .box-header:after {
@@ -1604,8 +1604,8 @@ body > .header .logo .icon {
   border-bottom-color: #d9dadc;
 }
 .btn.btn-primary {
-  background-color: #bd9400;
-  border-color: #bd9400;
+  background-color: #144454;
+  border-color: #144454;
 }
 /*
 .btn.btn-primary:hover,
@@ -1970,7 +1970,7 @@ body > .header .logo .icon {
   background: #000;
 }
 .navbar .nav a {
-  color: #bd9400;
+  color: #16b3f9;
 }
 .navbar .nav > li > a:hover,
 .navbar .nav > li > a:active,
@@ -2012,13 +2012,13 @@ body > .header .logo .icon {
   color: #d5cbaa;
 }
 .left-side .sidebar > .sidebar-menu {
-	border-bottom: 1px solid #bd9400;
-	border-top: 1px solid #bd9400;
+	border-bottom: 1px solid #143e4c;
+	border-top: 1px solid #143e4c;
 }
 
 .left-side .sidebar > .sidebar-menu > li > a { 
-  border-top: 1px solid #bd9400;
-  border-bottom: 1px solid #bd9400;
+  border-top: 1px solid #143e4c;
+  border-bottom: 1px solid #143e4c;
 }
 
 /* skin-blue sidebar */
@@ -2034,15 +2034,15 @@ body > .header .logo .icon {
   border-top: 1px solid #dbdbdb;
 }
 .sidebar-default > .sidebar-menu > li:first-of-type > a {
-  border-top: 1px solid #fbf8ef;
+  border-top: 1px solid #143e4c;
 }
 .sidebar > .sidebar-menu > li > a {
   margin-right: 1px;
 }
 .sidebar > .sidebar-menu > li > a:hover,
 .sidebar > .sidebar-menu > li.active > a {
-  color: #fff;
-  background: #bd9400;
+  color: #b4e3f9;
+  background: #143e4c;
 }
 .sidebar > .sidebar-menu > li > .treeview-menu {
   margin: 0 1px;
@@ -2055,31 +2055,31 @@ body > .header .logo .icon {
   box-shadow: inset -3px 0px 8px -4px rgba(0, 0, 0, 0.07);
 }
 .sidebar a {
-  color: #c79a01;
+  color: #17b3f9;
 }
 .sidebar a:hover {
   text-decoration: none;
 }
 .treeview-menu > li > a {
-  color: #fff4d1;
+  color: #b4e3f9;
 }
 .treeview-menu > li.active > a,
 .treeview-menu > li > a:hover {
-  color: #bd9400;
+  color: #fff;
   background-color: #000000;
 }
  .sidebar-form {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  border: 1px solid #8e866a;
+  border: 1px solid #143e4c;
   margin: 10px 10px;
 }
 .sidebar-form input[type="text"],
  .sidebar-form .btn {
   box-shadow: none;
-  background-color: #2d2711;
-  border: 1px solid #8e866a;
+  background-color: #14262b;
+  border: 1px solid #144454;
   height:34px;
 }
 
@@ -2087,7 +2087,7 @@ body > .header .logo .icon {
   height:34px;
 }
 .sidebar-form input[type="text"] {
-  color: #d5cbaa;
+  color: #7acaef;
   -webkit-border-top-left-radius: 2px !important;
   -webkit-border-top-right-radius: 0 !important;
   -webkit-border-bottom-right-radius: 0 !important;
@@ -2276,10 +2276,7 @@ http://wrapbootstrap.com/preview/WB0907F35 */
 	
 }
 
-body {
-	
-	color: #d5cbaa !important;
-}
+
 
 .page {
 	 display: none;

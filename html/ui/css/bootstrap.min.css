@@ -2944,8 +2944,8 @@ output {
     padding: 6px 12px;
     font-size: 14px;
     line-height: 1.42857143;
-    color: #bd9400;
-    background-color: #fbf8ef;
+    color: #7acaef;
+    background-color: #14262b;
     background-image: none;
     border: 1px solid #bd9400;
     border-radius: 0px;
@@ -3431,8 +3431,8 @@ select[multiple].form-group-lg .form-control,textarea.form-group-lg .form-contro
 
 .btn-default {
     color: #fbf8ef;
-    background-color: #bd9400;
-    border-color: #bd9400;
+    background-color: #153b4a;
+    border-color: #153b4a;
 }
 /*
 .btn-default.active,.btn-default.focus,.btn-default:active,.btn-default:focus,.btn-default:hover,.open>.dropdown-toggle.btn-default {
@@ -5338,9 +5338,9 @@ a.thumbnail.active,a.thumbnail:focus,a.thumbnail:hover {
 }
 
 .alert-success {
-    color: #bd9400;
-    background-color: #000000;
-    border-color: #bd9400;
+    color: #17b3f3;
+    background-color: #152c34;
+    border-color: #204250;
 }
 
 .alert-success hr {

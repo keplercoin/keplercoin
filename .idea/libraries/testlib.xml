@@ -1,11 +1,13 @@
 <component name="libraryTable">
   <library name="testlib">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/testlib/junit-4.11.jar!/" />
-      <root url="jar://$PROJECT_DIR$/testlib/mockito-all-1.9.5.jar!/" />
-      <root url="jar://$PROJECT_DIR$/testlib/hamcrest-core-1.3.jar!/" />
+      <root url="file://$PROJECT_DIR$/testlib" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/testlib" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/testlib" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/testlib" recursive="false" type="SOURCES" />
   </library>
 </component>

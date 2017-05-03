@@ -1181,11 +1181,7 @@
   "previous_block_hash": "Previous Block Hash",
   "block_signature": "Block Signature",
   "block_timestamp": "Block Timestamp",
-<<<<<<< HEAD
-    "following_plugins_detected": "The following active plugins have been detected:",
-=======
   "following_plugins_detected": "The following active plugins have been detected:",
->>>>>>> 90d4e8111790812bfe9c9d3c66b228822739e3b1
   "plugin_security_notice_full_access": "Plugins are not sandboxed or restricted in any way and have full accesss to your client system including your KPL passphrase.",
   "plugin_security_notice_trusted_sources": "Make sure to only run plugins downloaded from trusted sources, otherwise you can loose your KPL! In doubt don't run plugins with accounts used to store larger amounts of KPL now or in the future.",
   "success_add_peer": "Peer added successfully!",

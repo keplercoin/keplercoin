@@ -77,11 +77,7 @@
                     <a href="javascript:;" class="xiaoc-btn-create" onclick="krs.registerAccount();return false;" data-i18n="CreateAccount">Create Your Account</a>
                     <script>
                         <!--
-<<<<<<< HEAD
-                       // canvas();
-=======
                         // canvas();
->>>>>>> 90d4e8111790812bfe9c9d3c66b228822739e3b1
 
                         //配置
                         var config = {
@@ -108,16 +104,6 @@
                             if(val.length<1){
                                 return false;
                             }
-<<<<<<< HEAD
-                            if(val.split(" ").length==12 && val.indexOf("-")<0){
-                                //密码登陆
-                                console.log("密码登录");
-                                krs.login(1,val);
-                            }else{
-                                //帐号登陆
-                                console.log("账号登录");
-                                krs.login(0,val);
-=======
                             if(val.split("-").length==4 && val.indexOf("KPL")===0){
                                 //帐号登陆
                                 console.log("账号登录");
@@ -126,7 +112,6 @@
                                 //密码登陆
                                 console.log("密码登录");
                                 krs.login(1,val);
->>>>>>> 90d4e8111790812bfe9c9d3c66b228822739e3b1
                             }
                         }
                         -->
@@ -215,11 +200,7 @@
                     }
 
                     $("#newPass").bind("input propertychange",function(){
-<<<<<<< HEAD
-                        if($.trim($(this).val()).length<32){
-=======
                         if($.trim($(this).val()).length<12){
->>>>>>> 90d4e8111790812bfe9c9d3c66b228822739e3b1
                             $("#newLoinBtn").removeClass("disabled").addClass("disabled");
                         }else{
                             $("#newLoinBtn").removeClass("disabled");
@@ -269,6 +250,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div id="remember_account_container">
                     <input type="checkbox" name="remember_account" id="remember_account" value="1" /> <span></span><label for="remember_account" data-i18n="remember_account">Remember account on this computer</label>
                 </div>
@@ -316,11 +298,7 @@
                     &nbsp;&nbsp;
                     <button class="btn btn-success" onclick="krs.registerAccount();return false;" data-i18n="new_q_create_account">New? Create Your Account!</button>
                 </div>
-<<<<<<< HEAD
-            </div>  
-=======
             </div>
->>>>>>> 90d4e8111790812bfe9c9d3c66b228822739e3b1
             <!--创建您的帐户-自定义-->
             <div class="panel panel-default" id="account_phrase_custom_panel" style="display:none;max-width:500px;">
                 <div class="panel-heading"><span class="glyphicon glyphicon-lock"></span> <span data-i18n="create_your_account">Create Your Account</span></div>
@@ -399,10 +377,11 @@
 
                                 <div class="callout callout-danger">
                                     <strong><span data-i18n="attention">Attention</span></strong>:
-                                     <span data-i18n="passphrase_warning_disclose">
+                                    <span data-i18n="passphrase_warning_disclose">
                                         Don't ever disclose your passphrase. If you lose it you lose access to your account!
                                     </span>
                                 </div>
+
                                 <div style="text-align:right">
                                     <input type="submit" class="btn btn-primary btn-sm" value="Next" data-i18n="[value]next" onclick="$('.step_2').hide();$('.step_3').show();return false;" />
                                     &nbsp;&nbsp;
@@ -413,8 +392,11 @@
                         <!--您的密码是非常重要的 ！为确保您已保存它，请写下下面的密码-->
                         <div class="step_3 account_phrase_generator_steps">
                             <p data-i18n="passphrase_write_below">Your passphrase is very important! In order to be sure that you have saved it, please write your passphrase below:</p>
-                             <div class="callout callout-danger" style="display:none" data-i18n="incorrectly_typed_passphrase">You have not typed the passphrase correctly, please try again!</div>
-                             <textarea style="width:100%;height:50px;margin-bottom:10px;" rows="2"></textarea>
+
+                            <div class="callout callout-danger" style="display:none" data-i18n="incorrectly_typed_passphrase">You have not typed the passphrase correctly, please try again!</div>
+
+                            <textarea style="width:100%;height:50px;margin-bottom:10px;" rows="2"></textarea>
+
                             <div style="text-align:right">
                                 <input type="submit" class="btn btn-primary btn-sm" value="Next" data-i18n="[value]next" onclick="krs.verifyGeneratedPassphrase();return false;" />
                                 &nbsp;&nbsp;
@@ -423,7 +405,7 @@
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
             <!--想选择您自己的密码？请单击此处-->
             <div id="custom_passphrase_link" style="margin-top:30px;margin-bottom:20px;text-align:center;display:none;">
                 <a href="#" onclick="krs.registerUserDefinedAccount();" data-i18n="choose_own_passphrase">Want to choose your own passphrase? Click here.</a>
