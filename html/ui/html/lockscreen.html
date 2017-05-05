@@ -1,0 +1,420 @@
+<div id="lockscreen">
+    <div id="old_browser_warning" style="display:none;margin-left:auto;margin-right:auto;margin-top:200px;background:white;color:black;padding:20px;width:300px;" data-i18n="old_browser_warning">You are using an old browser which this application does not support.</div>
+    <table id="center" style="display:none;width:100%;height:100%; background: none;">
+        <tr><td style="text-align:center;vertical-align:middle;">
+            <!--by xiaoc-->
+            <style>
+                .xioac-logo{vertical-align: middle; margin: 0 10px;}
+                .xiaoc-box{ width: 380px; height: 280px; background:rgba(23, 179, 249, 0.61); padding: 10px; margin: 0 auto; box-shadow: 0 0 140px #000000; border-radius: 18px;}
+                .xiaoc-content{ width: 360px; height: 260px; background-color: #000;position: relative; border-radius: 12px;}
+                .xiaoc-title{ font-size: 28px; text-align: center; margin: 0; padding: 20px 0; color: #17b3f9;}
+                .xiaoc-input{ border: 1px solid #17b3f9; padding: 5px; background:#131618;  width: 300px; height: 80px; position: absolute; left: 50%; top:50%; z-index: 1; margin-left: -150px; margin-top: -40px;}
+                .xiaoc-input>textarea{ width: 100%; background: none; outline: none; height: 100%; border: 0;resize: none; line-height:22px;  font-size: 16px; color: #17b3f9; font-weight: 400;}
+                .xiaoc-btn-login{ cursor: pointer; display: block; width: 300px; height: 44px; background-color: #17b3f9; color: #fff; font-size: 14px; position:absolute; left: 50%; margin-left: -150px; bottom: 23px; text-align: center; line-height: 44px;}
+                .xiaoc-btn-login:hover{ background-color: #57c4f5; color: #fff;}
+                .xiaoc-btn-login:active{ background-color: #17b3f9; color: #fff;}
+                .xiaoc-btn-login.disabled{background-color: #17b3f9!important;color: #7f6c1f!important;}
+                .xiaoc-btn-login:link{ color: #fff;}
+                .xiaoc-btn-create{ position: fixed; right: 18px; top: 18px; color: #fff; font-size: 14px;}
+                .xiaoc-btn-create:hover{ text-decoration: underline;}
+                .xiaoc-input-area{margin: 0;}
+                .xiaoc-box-reg{ height: 380px;}
+                .xiaoc-box-reg .xiaoc-content{ height: 360px;}
+                .xiaoc-box-reg .xiaoc-input{margin-top: -68px;}
+                .xiaoc-input-tishi{ font-size: 14px; color: #f0f0f0; position: absolute; left:30px; top:50%; z-index: 1; margin-top: -92px;}
+                .xiaoc-btn-copy{position: absolute; top: 50%; margin-top: 15px; right: 30px; font-size: 14px; color: #f0f0f0;}
+                .xiaoc-btn-copy:hover,
+                .xiaoc-btn-copy:active{ text-decoration: underline; color:#17b3f9; }
+                .xiaoc-tebie-tishi{ background:#daffd6; width: 300px; border: 1px solid #13c600; padding:4px 10px; position: absolute; height: 50px; top: 50%; margin-top: 46px; left: 50%; margin-left: -150px;}
+                .xiaoc-tebie-tishi p{ margin-left:30px; text-align:left;line-height:20px; font-size: 12px; color: #0f8e02;}
+                .xiaoc-tebie-tishi .left-logo{ position: absolute; top: 50%; left: 5px; width: 30px; height: 30px; margin-top: -15px;}
+                canvas {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                }
+                .dg.ac{ display: none;}
+            </style>
+            <canvas id="canvas"></canvas>
+            <!--登陆-->
+            <div class="xiaoc-box" id="login_panel">
+                <div class="xiaoc-content">
+                    <h1 class="xiaoc-title">
+                        <span data-i18n="my">my</span>
+                        <img class="xiaoc-logo" src="img/log_03.png" width="48" height="48">
+                        <span data-i18n="wallet">wallet</span>
+                    </h1>
+                    <div class="xiaoc-input-area">
+                        <label class="xiaoc-input">
+                            <span style="display:none;"  data-i18n="AccountPlaceholder" id="AccountPlaceholder"></span>
+                            <textarea placeholder="" id="userInfo"></textarea>
+                            <script>
+                                setPlaceholder();
+                                function setPlaceholder(){
+                                    if($("#AccountPlaceholder").html().length<1){
+                                        setTimeout(function(){
+                                            setPlaceholder();
+                                        },500);
+                                    }else{
+                                        $("#userInfo").attr("placeholder",$("#AccountPlaceholder").html());
+                                    }
+                                }
+                                $("#userInfo").bind("focus",function(){
+                                    if(!$(this).val() || $(this).val()==$("#AccountPlaceholder").html()){
+                                        $(this).attr("placeholder",$("#AccountPlaceholder").html());
+                                    }
+                                });
+                                $("#userInfo").bind("blur",function(){
+                                    if(!$(this).val() || $(this).val()==$("#AccountPlaceholder").html()){
+                                        $(this).attr("placeholder",$("#AccountPlaceholder").html());
+                                    }
+                                });
+                            </script>
+                        </label>
+                    </div>
+                    <a href="javascript:;" onclick="login($.trim($('#userInfo').val()))" class="xiaoc-btn-login" data-i18n="login">Enter</a>
+                    <a href="javascript:;" class="xiaoc-btn-create" onclick="krs.registerAccount();return false;" data-i18n="CreateAccount">Create Your Account</a>
+                    <script>
+                        <!--
+                        // canvas();
+
+                        //配置
+                        var config = {
+                            vx: 4,//点x轴速度,正为右，负为左
+                            vy:  4,//点y轴速度
+                            height: 6,//点高宽，其实为正方形，所以不宜太大
+                            width: 6,
+                            count: 250,//点个数
+                            color: "90,191,232",//点颜色
+                            stroke: "90,191,232",//线条颜色
+                            dist: 6000,//点吸附距离
+                            e_dist: 20000,//鼠标吸附加速距离
+                            max_conn: 100//点到点最大连接数
+                        };
+                        //调用
+                        var browser=navigator.appName;
+                        if(!browser || browser.indexOf("Microsoft Internet Explorer")<0) CanvasParticle(config);
+
+                        $("body").css({
+                            "overflow":"hidden"
+                        });
+
+                        function login(val){
+                            if(val.length<1){
+                                return false;
+                            }
+                            if(val.split("-").length==4 && val.indexOf("KPL")===0){
+                                //帐号登陆
+                                console.log("账号登录");
+                                krs.login(0,val);
+                            }else{
+                                //密码登陆
+                                console.log("密码登录");
+                                krs.login(1,val);
+                            }
+                        }
+                        -->
+                    </script>
+                </div>
+            </div>
+            <!--创建帐户-->
+            <div class="xiaoc-box xiaoc-box-reg" id="account_phrase_generator_panel" style="display: none;">
+                <div class="xiaoc-content">
+                    <h1 class="xiaoc-title">
+                        <span data-i18n = "create">Create</span>
+                        <img class="xiaoc-logo" src="img/log_03.png" width="48" height="48">
+                        <span data-i18n = "account">Account</span>
+                    </h1>
+                    <div class="step_2 xiaoc-input-area">
+                        <div class="xiaoc-input-tishi" id="regSubTitle" data-i18n="systemInfo">The system generates a password for you</div>
+                        <label class="xiaoc-input">
+                            <span style="display:none" data-i18n="customPlaceholderInfo" id="customPlaceholderInfo"></span>
+                            <textarea placeholder="" id="newPass" onclick="if(!$(this).attr('attr-auto')) $(this).select()"></textarea>
+                            <script>
+                                setPlaceholder2();
+                                function setPlaceholder2(){
+                                    if($("#customPlaceholderInfo").html().length<1){
+                                        setTimeout(function(){
+                                            setPlaceholder2();
+                                        },500);
+                                    }else{
+                                        $("#newPass").attr("placeholder",$("#customPlaceholderInfo").html());
+                                    }
+                                }
+                                $("#newPass").bind("focus",function(){
+                                    if(!$(this).val() || $(this).val()==$("#customPlaceholderInfo").html()){
+                                        $(this).attr("placeholder",$("#customPlaceholderInfo").html());
+                                    }
+                                });
+                                $("#newPass").bind("blur",function(){
+                                    if(!$(this).val() || $(this).val()==$("#customPlaceholderInfo").html()){
+                                        $(this).attr("placeholder",$("#customPlaceholderInfo").html());
+                                    }
+                                });
+                            </script>
+                        </label>
+                    </div>
+                    <div class="xiaoc-tebie-tishi">
+                        <img src="img/wrong.png" class="left-logo">
+                        <p data-i18n="passwordInfo">The password is the only certificate! Lost or forgotten will not be able to enter the account and cannot be redeemed!</p>
+                    </div>
+                    <a href="javascript:;" onclick="goLogin($.trim($('#newPass').val()))" class="xiaoc-btn-login disabled" id="newLoinBtn" data-i18n="rememberPassword">You have already remembered the password, login</a>
+                    <a href="javascript:;" onclick="copyPass()" class="xiaoc-btn-copy" id="copyPassID" style="right: 110px;" data-i18n="copyPass">copyPassword</a>
+                    <a href="javascript:;" onclick="autoCustom()" class="xiaoc-btn-copy" data-i18n="customPassword">customPassword</a>
+                    <span style="display:none" data-i18n="customInfo" id="customInfo">Set a password as required</span>
+                    <span style="display:none" data-i18n="customInfoRe" id="customInfoRe">To confirm this password, enter the account immediately</span>
+                    <span style="display:none" data-i18n="customCopyInfo" id="customCopyInfo">Has been copied, can stick.</span>
+                </div>
+                <script>
+                    <!--
+
+                    if(navigator.userAgent.indexOf("JavaFX")>0){
+                        $("#copyPassID").remove();
+                    }else{
+                        $("#copyPassID").show();
+                    }
+
+                    function copyPass(){
+                        if($.trim($("#newPass").val()).length<1) return false;
+                        $("#newPass").select(); // 选择对象
+                        document.execCommand("Copy"); // 执行浏览器复制命令
+                        alert($("#customCopyInfo").html());
+                    }
+
+                    function autoCustom(){
+                        if(window.timer) clearTimeout(window.timer);
+                        $("#regSubTitle").html($("#customInfo").html());
+                        $("#newLoinBtn").html($("#customInfoRe").html());
+                        $("#newPass").removeAttr("readonly").attr("placeholder",this.value).select();
+                        $("#newLoinBtn").removeClass("disabled").addClass("disabled");
+                        $("#newPass").val('').blur();
+                        window.timer = setTimeout(function(){
+                            $("#newPass").val('').focus().attr("attr-auto",true);
+                        },6000);
+                    }
+
+                    function goLogin(val){
+                        $("#account_phrase_generator_panel").hide();
+                        $("#login_panel").show();
+                    }
+
+                    $("#newPass").bind("input propertychange",function(){
+                        if($.trim($(this).val()).length<12){
+                            $("#newLoinBtn").removeClass("disabled").addClass("disabled");
+                        }else{
+                            $("#newLoinBtn").removeClass("disabled");
+                        }
+                    });
+
+                    -->
+                </script>
+            </div>
+            <!--/by xiaoc-->
+
+            <!--登陆-->
+            <div id="login_panel-bak" style="display: none;">
+                <div class="callout callout-danger" id="testnet_login" style="max-width:400px;min-width:400px;display:none;" data-i18n="testnet_login_warning">Log in with your TestNet account - not your real one!</div><div id="login_error" style="max-width:400px;min-width:400px;display:none">
+                <div class="callout callout-danger"></div>
+            </div>
+
+                <button type="button" id="loginButtons" class="btn btn-primary" data-toggle="button" data-login-type="account" aria-pressed="false" style="min-width:40px;">
+                    <input type="hidden" name="loginType" id="accountLogin" value="account" autocomplete="off" /><i class="fa fa-male"></i>
+                </button>
+
+                <div class="lockscreen-item">
+                    <div class="lockscreen-credentials">
+                        <div class="input-group" id="login_account_container" style="display:table;height:34px;width: 100%;">
+                            <div class="dropdown" style="width: 100%;">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" style="width: 100%;">
+                                    <span data-i18n="select_account_to_login">Select an Account to Login with</span>
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" id="login_account">
+
+                                </ul>
+                            </div>
+                        </div>
+                        <input type="hidden" name="check_password_length" id="login_check_password_length" value="1" />
+                        <div class="input-group" id="login_account_container_other">
+                            <input type="text" class="form-control" id="login_account_other" name="login_account_other" placeholder="Your KPL Account" data-i18n="[placeholder]your_account" autofocus />
+                            <div class="input-group-btn" style="border:1px solid #fff;">
+                                <button class="btn btn-flat" onclick="krs.login(0,$('#login_account_other').val())"><i class="fa fa-arrow-right text-muted"></i></button>
+                            </div>
+                        </div>
+                        <div class="input-group" style="display:none">
+                            <input type="password" class="form-control" id="login_password" name="login_password" placeholder="Your Passphrase" data-i18n="[placeholder]your_passphrase" autofocus disabled />
+                            <div class="input-group-btn" style="border:1px solid #fff;">
+                                <button class="btn btn-flat" onclick="krs.login(1,$('#login_password').val())"><i class="fa fa-arrow-right text-muted"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="remember_account_container">
+                    <input type="checkbox" name="remember_account" id="remember_account" value="1" /> <span></span><label for="remember_account" data-i18n="remember_account">Remember account on this computer</label>
+                </div>
+                <div style="height:30px;">
+                    <div id="remember_password_container" style="display: none;">
+                        <input type="checkbox" name="remember_password" id="remember_password" value="1" /> <span></span><label for="remember_password" data-i18n="remember_passphrase_during_session">Remember passphrase during session</label>
+                    </div>
+                </div>
+
+                <div id="lockscreen_active_plugins_warning" style="margin-top:7px;display:none;">
+                    <div style="display:inline-block;max-width: 400px; min-width: 400px;">
+                        <div style="margin-top:10px;margin-bottom:12px;">
+                            <a href="#" id="lockscreen_active_plugins_overview" class="label label-default" data-content="" data-toggle="popover" data-placement="top" data-i18n="active_plugins">
+                                Active Plugins
+                            </a>&nbsp;
+                            <a href="#" id="lockscreen_active_plugins_security" class="label label-warning" data-content="" data-toggle="popover" data-placement="top" data-i18n="security_notice">
+                                Security Notice
+                            </a>
+                        </div>
+                        <div>
+                        <span style="color:#fff;opacity:0.96;">
+                            <input type="checkbox" name="disable_all_plugins" id="disable_all_plugins"/> <label for="disable_all_plugins" style="font-weight:normal;" data-i18n="disable_plugins">Disable Plugins during Session</label>
+                        </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="registration_link">
+                    <a href="#" onclick="krs.registerAccount();" data-i18n="no_account_q_create_account">Don't have an account? Click here to create one!</a>
+                </div>
+            </div>
+            <!--欢迎来到KPL->
+            <div class="panel panel-default" id="welcome_panel" style="display:none;max-width:500px;">
+                <div class="panel-heading">
+                    <div style="float:right;">
+                        <select name="language" class="form-control" style="width:150px">
+                        </select>
+                    </div>
+                    <div style="display:inline-block;padding-top:6px;padding-bottom:4px;">
+                        <span class="glyphicon glyphicon-lock"></span> <span data-i18n="welcome_to_KPL">Welcome to KPL</span>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <button class="btn btn-primary" onclick="krs.showLoginScreen();return false;" data-i18n="returning_user_q">Returning User?</button>
+                    &nbsp;&nbsp;
+                    <button class="btn btn-success" onclick="krs.registerAccount();return false;" data-i18n="new_q_create_account">New? Create Your Account!</button>
+                </div>
+            </div>
+            <!--创建您的帐户-自定义-->
+            <div class="panel panel-default" id="account_phrase_custom_panel" style="display:none;max-width:500px;">
+                <div class="panel-heading"><span class="glyphicon glyphicon-lock"></span> <span data-i18n="create_your_account">Create Your Account</span></div>
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form" method="post" autocomplete="off">
+                        <div class="callout callout-info" style="max-width:500px;" data-i18n="passphrase_length_warning">Your passphrase must be at least 35 characters long.</div>
+
+                        <div class="callout callout-danger" style="word-break:inherit;">
+                            <span data-i18n="attention">Attention</span>:<br><br>
+                            <span data-i18n="passphrase_warning_unique">
+                                The passphrase is everything that stands between your account and the rest of the world. Do not use any meaningful sentence, especially any that appears in song or literature.
+                            </span><br><br>
+                            <span data-i18n="passphrase_warning_disclose">
+                                Don't ever disclose your passphrase. If you lose it you lose access to your account!
+                            </span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="registration_password" class="col-sm-3 control-label" data-i18n="passphrase">Passphrase</label>
+                            <div class="col-sm-9"><input type="password" name="registration_password" class="form-control" id="registration_password" placeholder="" /></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="registration_password_repeat" class="col-sm-3 control-label" data-i18n="repeat">Repeat</label>
+                            <div class="col-sm-9"><input type="password" name="registration_password_repeat" class="form-control" id="registration_password_repeat" placeholder="" /></div>
+                        </div>
+
+                        <div style="text-align:right">
+                            <input type="submit" class="btn btn-primary btn-sm" value="Register" data-i18n="[value]register" />
+                            &nbsp;&nbsp;
+                            <button class="btn btn-sm btn-default" onclick="krs.showLoginOrWelcomeScreen();return false;" data-i18n="cancel">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--创建您的帐户-->
+            <div class="panel panel-default" id="account_phrase_generator_panel-bak" style="display:none;max-width:500px">
+                <div class="panel-heading"><span class="glyphicon glyphicon-lock"></span> <span data-i18n="create_your_account">Create Your Account</span></div>
+                <div class="panel-body">
+                    <!--加载单词列表-->
+                    <div id="account_phrase_generator_loading">
+                        <p><span class="loading_text" data-i18n="loading_word_list">Loading Word List</span><span class="loading_dots"><span>.</span><span>.</span><span>.</span></span></p>
+
+                        <div style="text-align:center;margin-top:20px;margin-bottom:20px;"><img src="/img/loading_indicator.gif" alt="Loading..." width="32" height="32" /></div>
+                    </div>
+                    <!--生成您的密码。请稍候-->
+                    <div id="account_phrase_generator_loaded">
+                        <!--移动光标来生成随机数字-->
+                        <div class="step_1 account_phrase_generator_steps">
+                            <div id="account_phrase_generator_seeder" class="seeder">
+                                <p data-i18n="seed_password_generator">Move your cursor around to seed the random number generator...</p>
+                                <div class="progress progress-striped">
+                                    <div class="progress-bar progress-bar-info" id="account_phrase_generator_seed_progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0;">
+                                        <span class="sr-only">0% Seeded</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="text-align:right">
+                                <button class="btn btn-sm btn-default" onclick="krs.showLoginOrWelcomeScreen();return false;" data-i18n="cancel">Cancel</button>
+                            </div>
+                        </div>
+                        <!--生成您的密码。请稍候...-->
+                        <div class="step_2 account_phrase_generator_steps">
+                            <div id="account_phrase_generator_start">
+                                <p><span data-i18n="generating_passphrase_wait">Generating your passphrase. Please wait</span><span class="loading_dots"><span>.</span><span>.</span><span>.</span></span></p>
+
+                                <div style="text-align:center;margin-top:20px;margin-bottom:20px;"><img src="/img/loading_indicator.gif" alt="Loading..." width="32" height="32" /></div>
+                            </div>
+
+                            <div id="account_phrase_generator_stop" style="display:none">
+                                <p data-i18n="automatically_generated_passphrase_is">Your automatically generated passphrase is:</p>
+
+                                <textarea style="width:100%;height:50px;margin-bottom:10px;padding:3px;" rows="2" readonly></textarea>
+
+                                <p data-i18n="memorize_passphrase_help">Please write down or memorize these 12 words (their order and capitalization matters - always lowercase). This passphrase is needed in order to access your KPL account.</p>
+
+                                <div class="callout callout-danger">
+                                    <strong><span data-i18n="attention">Attention</span></strong>:
+                                    <span data-i18n="passphrase_warning_disclose">
+                                        Don't ever disclose your passphrase. If you lose it you lose access to your account!
+                                    </span>
+                                </div>
+
+                                <div style="text-align:right">
+                                    <input type="submit" class="btn btn-primary btn-sm" value="Next" data-i18n="[value]next" onclick="$('.step_2').hide();$('.step_3').show();return false;" />
+                                    &nbsp;&nbsp;
+                                    <button class="btn btn-sm btn-default" id="registration_cancel" onclick="krs.showLoginOrWelcomeScreen();return false;" data-i18n="cancel">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--您的密码是非常重要的 ！为确保您已保存它，请写下下面的密码-->
+                        <div class="step_3 account_phrase_generator_steps">
+                            <p data-i18n="passphrase_write_below">Your passphrase is very important! In order to be sure that you have saved it, please write your passphrase below:</p>
+
+                            <div class="callout callout-danger" style="display:none" data-i18n="incorrectly_typed_passphrase">You have not typed the passphrase correctly, please try again!</div>
+
+                            <textarea style="width:100%;height:50px;margin-bottom:10px;" rows="2"></textarea>
+
+                            <div style="text-align:right">
+                                <input type="submit" class="btn btn-primary btn-sm" value="Next" data-i18n="[value]next" onclick="krs.verifyGeneratedPassphrase();return false;" />
+                                &nbsp;&nbsp;
+                                <button class="btn btn-sm btn-default" onclick="krs.showLoginOrWelcomeScreen();return false;" data-i18n="cancel">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--想选择您自己的密码？请单击此处-->
+            <div id="custom_passphrase_link" style="margin-top:30px;margin-bottom:20px;text-align:center;display:none;">
+                <a href="#" onclick="krs.registerUserDefinedAccount();" data-i18n="choose_own_passphrase">Want to choose your own passphrase? Click here.</a>
+            </div>
+        </td>
+        </tr>
+    </table>
+    <!-- this dummy checkbox corrects rendering problem of checkboxes when using desktop application on Linux -->
+    <!--div id="dummyCheckbox">
+        <input type="checkbox" disabled>
+    </div-->
+</div>

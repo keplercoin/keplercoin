@@ -1,0 +1,35 @@
+<shortcuts>
+	<skipIfNotSupported/>
+	<defaultCurrentUser/>
+	<programGroup defaultName="kpl" location="startMenu"/>
+	<shortcut
+		name="kpl Server"
+		target="$INSTALL_PATH\kpl.exe"
+		commandLine=""
+		workingDirectory="$INSTALL_PATH"
+        description="Start kpl server"
+		iconFile="$INSTALL_PATH\html\ui\favicon.ico"
+        iconIndex="0"
+        initialState="normal"
+        programGroup="yes"
+		desktop="yes"
+        applications="no"
+        startMenu="no"
+		startup="no">
+	</shortcut>	
+	<shortcut
+		name="kpl Wallet"
+		target="http://localhost:7876/index.html"
+		commandLine=""
+		workingDirectory="$INSTALL_PATH"
+        description="Launch kpl wallet in browser"
+		iconFile="$INSTALL_PATH\html\ui\favicon.ico"
+        iconIndex="0"
+        initialState="normal"
+        programGroup="yes"
+		desktop="yes"
+        applications="no"
+        startMenu="no"
+		startup="no">
+	</shortcut>	
+</shortcuts>

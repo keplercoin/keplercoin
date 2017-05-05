@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Class-Path: lib/bcprov-jdk15on-154.jar lib/core-3.2.1.jar lib/h2-1.4.1
+  92.jar lib/javase-3.2.1.jar lib/javax.servlet-api-3.1.0.jar lib/jett
+ y -continuation-9.3.10.v20160621.jar lib/jetty-http-9.3.10.v20160621.
+ ja r lib/jetty-io-9.3.10.v20160621.jar lib/jetty-security-9.3.10.v201
+ 606 21.jar lib/jetty-server-9.3.10.v20160621.jar lib/jetty-servlet-9.
+ 3.10 .v20160621.jar lib/jetty-servlets-9.3.10.v20160621.jar lib/jetty
+ -util -9.3.10.v20160621.jar lib/json-simple-1.1.1.jar lib/lucene-anal
+ yzers- common-5.3.2.jar lib/lucene-core-5.3.2.jar lib/lucene-queries-
+ 5.3.2.j ar lib/lucene-queryparser-5.3.2.jar lib/slf4j-api-1.7.21.jar 
+ lib/slf4 j-jdk14-1.7.21.jar lib/tika-core-1.13.jar lib/tika-parsers-1
+ .13.jar l ib/websocket-api-9.3.10.v20160621.jar lib/websocket-client-
+ 9.3.10.v20 160621.jar lib/websocket-common-9.3.10.v20160621.jar lib/w
+ ebsocket-se rver-9.3.10.v20160621.jar lib/websocket-servlet-9.3.10.v2
+ 0160621.jar lib/weupnp-0.1.4.jar conf/
+Main-Class: kpl.Kpl
+
