@@ -135,7 +135,7 @@ var ATS = (function(ATS, $, undefined) {
     };
 
     ATS.submitForm = function(form, fileParameter) {
-        var url = '/KPL';
+        var url = '/kpl';
         var params = {};
         for (var i = 0; i < form.elements.length; i++) {
             if (form.elements[i].type != 'button' && form.elements[i].value && form.elements[i].value != 'submit') {
@@ -211,7 +211,7 @@ var ATS = (function(ATS, $, undefined) {
             alert('API not available, check if KPL Server is running!');
         });
         if ($(form).has('.uri-link').length > 0) { 
-            var uri = '/KPL?' + jQuery.param(params, true);
+            var uri = '/kpl?' + jQuery.param(params, true);
             form.getElementsByClassName("uri-link")[0].innerHTML = '<a href="' + uri + '" target="_blank" style="font-size:12px;font-weight:normal;">Open GET URL</a>';
         }
         return false;
