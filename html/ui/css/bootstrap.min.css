@@ -2895,7 +2895,6 @@ label {
     display: inline-block;
     max-width: 100%;
     margin-bottom: 5px;
-    font-weight: 700
 }
 
 input[type=search] {
@@ -3721,7 +3720,7 @@ tbody.collapse.in {
     font-size: 14px;
     text-align: left;
     list-style: none;
-    background-color: #fbf8ef;
+    background-color: #edf6fa;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     border: 1px solid #ccc;
@@ -4157,7 +4156,7 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 }
 
 .input-group-btn:last-child>.btn,.input-group-btn:last-child>.btn-group {
-    margin-left: -1px
+    margin-left: 0px
 }
 
 .nav {
@@ -4316,7 +4315,6 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 .nav-justified {
     width: 100%;
     border-bottom: 1px solid #153b4a;
-    background-color: #f9f1da;
 }
 
 .nav-justified>li {
@@ -5364,7 +5362,7 @@ a.thumbnail.active,a.thumbnail:focus,a.thumbnail:hover {
 }
 
 .alert-warning {
-    color: #8a6d3b;
+    color: #17b3f9;
     background-color: #000000;
     border-color: #153b4a;
 }
