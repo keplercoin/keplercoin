@@ -199,7 +199,7 @@ var krs = (function(krs, $) {
         if (parentMenu.length == 0) {
             return;
         }
-        var menuHTML ='<li class="sm_treeview_submenu" style="background-color:#2e2712;color:#bd9400;padding-top:3px;padding-bottom:3px;">';
+        var menuHTML ='<li class="sm_treeview_submenu" style="background-color:#2e2712;color:#17b3f9;padding-top:3px;padding-bottom:3px;">';
         menuHTML += '<span class="sm_sub_header"><span style="display:inline-block;width:20px;">&nbsp;</span> ';
         menuHTML += options["titleHTML"] + ' </span></li>';
         parentMenu.append(menuHTML);

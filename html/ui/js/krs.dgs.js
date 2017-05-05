@@ -167,7 +167,7 @@ var krs = (function(krs, $) {
 					krs.hasMorePages = response.tags.length > _tagsPerPage;
 					for (var i=0; i<response.tags.length; i++) {
 						content += '<div style="padding:5px 24px 5px 24px;text-align:center;font-size:16px;';
-						content += 'width:220px;display:inline-block;margin:2px;border:1px solid #bd9400;">';
+						content += 'width:220px;display:inline-block;margin:2px;border:1px solid #17b3f9;">';
 						content += '<a href="#" onclick="event.preventDefault(); krs.dgs_search_tag(\'' +response.tags[i].tag + '\');">';
 						content += response.tags[i].tag.escapeHTML() + ' [' + response.tags[i].inStockCount + ']</a>';
 						content += '</div>';
