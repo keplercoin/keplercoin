@@ -33,7 +33,7 @@ html.lockscreen, html.lockscreen body {
   overflow-x:auto;
 }
 a {
-  color: #17b3f9;
+  color: #4c94b5;
 }
 a:hover,
 a:active,
@@ -350,7 +350,7 @@ img {
 /* Change the color of the striped tables */
 .table-striped > tbody > tr:nth-child(odd) > td,
 .table-striped > tbody > tr:nth-child(odd) > th {
-  background-color: #fbf8ef;
+  background-color: #edf6fa;
 }
 /* .text-center in tables */
 table.text-center td,
@@ -1703,19 +1703,19 @@ body > .header .logo .icon {
 }
 .callout.callout-danger {
   background-color: #152c34;
-  border-color: #67bcdf;
+  border-color: #152c34;
   word-break: break-all;
   color: #16a6e6;
 }
 .callout.callout-warning {
-  background-color: #152529;
-  border-color: #152529;
-  color: #d6ab11;
+  background-color: #14323e;
+  border-color: #14323e;
+  color: #17b3f9;
 }
 .callout.callout-info {
-  background-color: #152529;
-  border-color: #152529;
-  color: #d6ab11;
+  background-color: #14323e;
+  border-color: #14323e;
+  color: #17b3f9;
 }
 .callout.callout-danger h4 {
   color: #B94A48;
@@ -3498,7 +3498,7 @@ html,body{height: 100%;}
 *{outline: none!important;}
 
 .modal-dialog .alert-warning{
-  background-color: #fbf0cd;
+  background-color: #14323e;
 }
 
 .modal-dialog .nav>li>a:hover{

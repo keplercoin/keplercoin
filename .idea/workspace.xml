@@ -13,6 +13,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
+      <file leaf-file-name="balanceleasing.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/ui/html/modals/balanceleasing.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+=======
       <file leaf-file-name="lockscreen.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/ui/html/lockscreen.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -180,10 +188,18 @@
                 <marker date="1493970273371" expanded="true" signature="10412:10938" ph="..." />
                 <marker date="1493970273371" expanded="true" signature="10680:10685" ph="&amp;amp;" />
               </folding>
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="bootstrap.min.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/ui/css/bootstrap.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="370">
+              <caret line="4316" column="37" lean-forward="true" selection-start-line="4316" selection-start-column="37" selection-end-line="4316" selection-end-column="37" />
+=======
       <file leaf-file-name="kpl-default.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/conf/kpl-default.properties">
           <provider selected="true" editor-type-id="text-editor">
@@ -209,11 +225,20 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="65">
               <caret line="54" column="11" lean-forward="false" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="app.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/html/ui/css/app.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="1706" column="24" lean-forward="true" selection-start-line="1706" selection-start-column="24" selection-end-line="1706" selection-end-column="24" />
+              <folding />
+=======
       <file leaf-file-name="sidebar.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/ui/html/sidebar.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -226,6 +251,7 @@
                 <marker date="1493970273494" expanded="true" signature="3754:3935" ph="..." />
                 <marker date="1493970273494" expanded="true" signature="4010:4020" ph="..." />
               </folding>
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
             </state>
           </provider>
         </entry>
@@ -254,6 +280,38 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+<<<<<<< HEAD
+      <find>3e351b</find>
+      <find>nm_inner_subtype</find>
+      <find>modal-dialog</find>
+      <find>c79a01</find>
+      <find>b4e3f9</find>
+      <find>fbf8ef</find>
+      <find>fbf8ef151d1e</find>
+      <find>151d1e</find>
+      <find>.logo</find>
+      <find>144454</find>
+      <find>.close</find>
+      <find>e5e5e5</find>
+      <find>.label-warning</find>
+      <find>17b3f9;</find>
+      <find>17b3f9</find>
+      <find>.callout.callout-danger</find>
+      <find>approve_modal</find>
+      <find>btn</find>
+      <find>btn</find>
+      <find>bd9400</find>
+      <find>input-group-btn</find>
+      <find>.modal-dialog .nav&gt;li&gt;a:hover</find>
+      <find>.nav-tabs&gt;li&gt;a:hove</find>
+      <find>rgb(209, 164, 0)</find>
+      <find>badge nm_inner_subtype</find>
+      <find>label</find>
+      <find>btn btn-default dropdown-toggle</find>
+      <find>important</find>
+      <find>button</find>
+      <find>.alert-warning</find>
+=======
       <find>Units</find>
       <find>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</find>
       <find>&lt;&lt;&lt;</find>
@@ -262,6 +320,7 @@
       <find>nm_inner</find>
       <find>nm_inner_subtype</find>
       <find>h1</find>
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
     </findStrings>
     <dirStrings>
       <dir>C:\Users\coin\keplercoin</dir>
@@ -286,9 +345,25 @@
         <option value="$PROJECT_DIR$/html/ui/index.html" />
         <option value="$PROJECT_DIR$/html/ui/html/header.html" />
         <option value="$PROJECT_DIR$/html/ui/html/sidebar.html" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/html/ui/html/modals/templates.html" />
+        <option value="$PROJECT_DIR$/html/ui/html/modals/voting_system.html" />
+        <option value="$PROJECT_DIR$/html/ui/js/krs.sitebuild.js" />
+        <option value="$PROJECT_DIR$/html/ui/js/krs.js" />
+        <option value="$PROJECT_DIR$/html/ui/js/krs.dgs.js" />
+        <option value="$PROJECT_DIR$/html/ui/js/krs.messages.js" />
+        <option value="$PROJECT_DIR$/html/ui/html/modals/ui_elements.html" />
+        <option value="$PROJECT_DIR$/html/ui/css/corporate.css" />
+        <option value="$PROJECT_DIR$/html/ui/html/header.html" />
+        <option value="$PROJECT_DIR$/html/ui/js/krs.monitors.js" />
+        <option value="$PROJECT_DIR$/html/ui/index.html" />
+        <option value="$PROJECT_DIR$/html/ui/css/bootstrap.min.css" />
+        <option value="$PROJECT_DIR$/html/ui/css/app.css" />
+=======
         <option value="$PROJECT_DIR$/html/ui/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/html/ui/css/app.css" />
         <option value="$PROJECT_DIR$/test/java/kpl/http/APICall.java" />
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
       </list>
     </option>
   </component>
@@ -361,6 +436,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
+              <option name="myItemId" value="css" />
+=======
               <option name="myItemId" value="locales" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -398,6 +476,7 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="html" />
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -683,7 +762,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
+=======
     <frame x="-7" y="27" width="1346" height="689" extended-state="0" />
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -749,6 +833,17 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/html/ui/js/test/test.extensions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/ui/js/test/test.nrs.encryption.js">
+=======
     <entry file="file://$PROJECT_DIR$/compile.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -757,6 +852,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/ui/index.html">
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
@@ -767,20 +863,39 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/html/ui/js/test/test.nrs.localstorage.js">
+=======
     <entry file="file://$PROJECT_DIR$/src/kpl/db/FullTextTrigger.java">
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="109" column="3" lean-forward="false" selection-start-line="109" selection-start-column="3" selection-end-line="109" selection-end-column="3" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/html/ui/js/test/test.nrs.util.js">
+=======
     <entry file="file://$PROJECT_DIR$/src/kpl/AssetDelete.java">
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/html/ui/js/test/test.nxtaddress.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/ui/js/util/converters.js">
+=======
     <entry file="file://$PROJECT_DIR$/src/kpldesktop/DesktopApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="950">
@@ -789,48 +904,73 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/kpldesktop/JavaScriptBridge.java">
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/html/ui/js/3rdparty/webdb.js">
+=======
     <entry file="file://$PROJECT_DIR$/src/kpldesktop/WalletContextMenu.java">
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/html/ui/js/3rdparty/qunit.js">
+=======
     <entry file="file://$PROJECT_DIR$/src/kpl/Db.java">
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="17" column="45" lean-forward="false" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/html/ui/js/3rdparty/pako.js">
+=======
     <entry file="file://$PROJECT_DIR$/src/kpl/Fee.java">
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="874">
           <caret line="68" column="80" lean-forward="false" selection-start-line="68" selection-start-column="80" selection-end-line="68" selection-end-column="80" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/html/ui/js/3rdparty/moment.js">
+=======
     <entry file="file://$PROJECT_DIR$/html/ui/locales/zh-cn/translation.json">
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1026">
           <caret line="54" column="22" lean-forward="false" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/html/ui/js/3rdparty/maskedinput.js">
+=======
     <entry file="file://$PROJECT_DIR$/html/ui/locales/en/translation.json">
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="15" column="115" lean-forward="false" selection-start-line="15" selection-start-column="115" selection-end-line="15" selection-end-column="115" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/html/ui/js/3rdparty/jsbn.js">
+=======
     <entry file="file://$PROJECT_DIR$/html/ui/html/lockscreen.html">
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8075">
           <caret line="425" column="18" lean-forward="false" selection-start-line="425" selection-start-column="18" selection-end-line="425" selection-end-column="18" />
@@ -942,76 +1082,127 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/html/ui/js/3rdparty/jquery.rss.js">
+=======
     <entry file="file://$PROJECT_DIR$/src/kpl/crypto/Crypto.java">
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="39" column="10" lean-forward="false" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/html/ui/js/3rdparty/jquery.js">
+=======
     <entry file="file://$PROJECT_DIR$/src/kpl/db/VersionedEntityDbTable.java">
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1463">
           <caret line="77" column="13" lean-forward="false" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/html/ui/js/3rdparty/i18next.js">
+=======
     <entry file="file://$PROJECT_DIR$/src/kpl/db/FullTextTrigger.java">
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2071">
           <caret line="109" column="3" lean-forward="false" selection-start-line="109" selection-start-column="3" selection-end-line="109" selection-end-column="3" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/html/ui/js/3rdparty/html5-qrcode.js">
+=======
     <entry file="file://$PROJECT_DIR$/src/kpl/AssetDelete.java">
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/html/ui/js/3rdparty/handlebars.js">
+=======
     <entry file="file://$PROJECT_DIR$/src/kpldesktop/DesktopApplication.java">
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="950">
           <caret line="50" column="13" lean-forward="false" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/html/ui/js/3rdparty/growl.js">
+=======
     <entry file="file://$PROJECT_DIR$/src/kpldesktop/JavaScriptBridge.java">
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/html/ui/js/3rdparty/date.format.js">
+=======
     <entry file="file://$PROJECT_DIR$/src/kpldesktop/WalletContextMenu.java">
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/html/ui/js/3rdparty/d3pie.js">
+=======
     <entry file="file://$PROJECT_DIR$/src/kpl/Db.java">
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="17" column="45" lean-forward="false" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/html/ui/js/3rdparty/d3.js">
+=======
     <entry file="file://$PROJECT_DIR$/src/kpl/Fee.java">
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1292">
           <caret line="68" column="80" lean-forward="false" selection-start-line="68" selection-start-column="80" selection-end-line="68" selection-end-column="80" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/html/ui/js/3rdparty/bootstrap.js">
+=======
     <entry file="file://$PROJECT_DIR$/src/kpl/crypto/Crypto.java">
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="39" column="10" lean-forward="false" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/html/ui/js/3rdparty/big.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-59">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/ui/js/3rdparty/async.js">
+=======
     <entry file="file://$PROJECT_DIR$/src/kpl/db/VersionedEntityDbTable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1026">
@@ -1020,19 +1211,69 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/kpl/db/FullTextTrigger.java">
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2071">
           <caret line="109" column="3" lean-forward="false" selection-start-line="109" selection-start-column="3" selection-end-line="109" selection-end-column="3" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/html/ui/js/3rdparty/ajaxretry.js">
+=======
     <entry file="file://$PROJECT_DIR$/src/kpl/AssetDelete.java">
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/html/ui/js/3rdparty/highlight.pack.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/ui/js/krs.monitors.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="236" column="0" lean-forward="true" selection-start-line="236" selection-start-column="0" selection-end-line="236" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/ui/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="192" column="9" lean-forward="false" selection-start-line="192" selection-start-column="9" selection-end-line="192" selection-end-column="9" />
+          <folding>
+            <marker date="1493953398558" expanded="true" signature="1339:1678" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/ui/html/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="40" column="70" lean-forward="false" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="70" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#nav#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#span#0;n#a#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#span#0;n#span#0;n#a#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#span#0;n#span#0;n#a#0;n#li#0;n#ul#1;n#div#0;n#nav#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#span#0;n#a#0;n#li#1;n#ul#1;n#div#0;n#nav#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#1;n#div#0;n#nav#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#li#2;n#ul#1;n#div#0;n#nav#0;n#header#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/ui/html/modals/voting_system.html">
+=======
     <entry file="file://$PROJECT_DIR$/src/kpldesktop/DesktopApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="950">
@@ -1062,12 +1303,133 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/html/ui/html/modals/ui_elements.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#span#2;n#div#1;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/ui/html/modals/transactions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/ui/html/modals/templates.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#span#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/ui/html/modals/tagged_data.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/ui/html/modals/shuffling.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/ui/html/modals/messages.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/ui/html/modals/krs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/ui/html/modals/forging.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/ui/html/modals/dgs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/ui/html/modals/contacts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/ui/html/modals/asset_exchange.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/ui/html/modals/aliases.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/ui/html/modals/account_properties.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/ui/html/modals/account_control.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/ui/html/modals/monetary_system.html">
+=======
     <entry file="file://$PROJECT_DIR$/src/kpl/crypto/Crypto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -1176,6 +1538,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/ui/css/main.css">
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1183,14 +1546,43 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/html/ui/html/modals/monitors.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
     <entry file="file://$PROJECT_DIR$/html/ui/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="55879">
           <caret line="2941" column="16" lean-forward="false" selection-start-line="2941" selection-start-column="16" selection-end-line="2941" selection-end-column="16" />
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/html/ui/html/modals/peers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/ui/html/modals/shape_shift.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="81" column="60" lean-forward="false" selection-start-line="81" selection-start-column="49" selection-end-line="81" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/ui/html/modals/balanceleasing.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
     <entry file="file://$PROJECT_DIR$/html/ui/html/lockscreen.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7695">
@@ -1321,12 +1713,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="39520">
           <caret line="2080" column="23" lean-forward="false" selection-start-line="2080" selection-start-column="23" selection-end-line="2080" selection-end-column="23" />
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/ui/html/header.html">
+    <entry file="file://$PROJECT_DIR$/html/ui/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="370">
+          <caret line="4316" column="37" lean-forward="true" selection-start-line="4316" selection-start-column="37" selection-end-line="4316" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/ui/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="1706" column="24" lean-forward="true" selection-start-line="1706" selection-start-column="24" selection-end-line="1706" selection-end-column="24" />
+          <folding />
+=======
         <state relative-caret-position="95">
           <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
           <folding>
@@ -1354,6 +1760,7 @@
             <marker date="1493970273371" expanded="true" signature="10412:10938" ph="..." />
             <marker date="1493970273371" expanded="true" signature="10680:10685" ph="&amp;amp;" />
           </folding>
+>>>>>>> ab3a0f6757bf8450d1d7eecd90ae6a91033ce7ac
         </state>
       </provider>
     </entry>
