@@ -263,7 +263,6 @@ function KplAddress() {
 
 			if ((i & 3) == 3 && i < 13) out += '-';
 		}
-
 		return out;
 	} //__________________________
 

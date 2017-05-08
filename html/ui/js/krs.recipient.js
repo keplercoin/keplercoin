@@ -31,7 +31,6 @@ var krs = (function(krs, $) {
 		$recipientFields.on("checkRecipient", function() {
 			var value = $(this).val();
 			var modal = $(this).closest(".modal");
-
 			if (value && value != "KPL-____-____-____-_____") {
 				krs.checkRecipient(value, modal);
 			} else {
@@ -206,7 +205,8 @@ var krs = (function(krs, $) {
 		account = $.trim(account);
 
 		//solomon reed. Btw, this regex can be shortened..
-		if (/^(KPL\-)?[A-Z0-9]+\-[A-Z0-9]+\-[A-Z0-9]+\-[A-Z0-9]+/i.test(account)) {
+		//if (/^(KPL\-)?[A-Z0-9]+\-[A-Z0-9]+\-[A-Z0-9]+\-[A-Z0-9]+/i.test(account)) {
+		if (/^([A-Z0-9]+\-)?[A-Z0-9]+\-[A-Z0-9]+\-[A-Z0-9]+\-[A-Z0-9]+/i.test(account)) {
 			var address = new KplAddress();
 
 			if (address.set(account)) {
