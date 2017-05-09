@@ -168,7 +168,6 @@
                         pos.begin == pos.end && (k = input.val().charCodeAt(pos.begin - 1), pos.begin--,
                             pos.end--);
                     }
-
                     if (!input.prop("readonly")) {
                         var p, c, next, k = e.which || e.keyCode, pos = input.caret();
                         if (!(e.ctrlKey || e.altKey || e.metaKey || 32 > k) && k && 13 !== k) {
@@ -191,6 +190,7 @@
                     for (i = start; end > i && len > i; i++) tests[i] && (buffer[i] = getPlaceholder(i));
                 }
                 function writeBuffer() {
+
                     input.val(buffer.join(""));
                 }
                 function checkVal(allow) {
@@ -243,6 +243,7 @@
                         clearTimeout(caretTimeoutId);
                         focusText = input.val();
                         var pos = checkVal();
+                        pos = 0;
                         caretTimeoutId = setTimeout(function() {
                             input.get(0) === document.activeElement && (writeBuffer(), pos == mask.replace("?", "").length ? input.caret(0, pos) : input.caret(pos));
                         }, 10);
