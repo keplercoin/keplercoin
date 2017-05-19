@@ -226,6 +226,9 @@
 //                            var newAddress = String(pastedData.match("KPL-\-[A-Z0-9]{4}\-[A-Z0-9]{4}\-[A-Z0-9]{4}\-[A-Z0-9]{5}"));
 //                            input.val(newAddress);
 //                            checkVal(true);
+//                            var newAddress = String(pastedData.match("KPL-\-[A-Z0-9]{4}\-[A-Z0-9]{4}\-[A-Z0-9]{4}\-[A-Z0-9]{5}"));
+//                            input.val(newAddress);
+//                            checkVal(true);
                         } else if (/^KPL\-[A-Z0-9]{4}\-[A-Z0-9]{4}\-[A-Z0-9]{4}\-[A-Z0-9]{5}/i.test(newInput) || /^KPL[A-Z0-9]{17}/i.test(newInput)) {
                             input.mask("KPL-****-****-****-*****").trigger("checkRecipient")/*.unbind(".remask")*/;
                         }
@@ -242,7 +245,6 @@
                         clearTimeout(caretTimeoutId);
                         focusText = input.val();
                         var pos = checkVal();
-                        console.log(pos);
                         pos = 0;
                         caretTimeoutId = setTimeout(function() {
                             input.get(0) === document.activeElement && (writeBuffer(), pos == mask.replace("?", "").length ? input.caret(0, pos) : input.caret(pos));
