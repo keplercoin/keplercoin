@@ -27,7 +27,7 @@ public final class Constants {
     public static final int MAX_NUMBER_OF_TRANSACTIONS = 255;
     public static final int MIN_TRANSACTION_SIZE = 176;
     public static final int MAX_PAYLOAD_LENGTH = MAX_NUMBER_OF_TRANSACTIONS * MIN_TRANSACTION_SIZE;
-    public static final long MAX_BALANCE_kpl = 1500000000;
+    public static final long MAX_BALANCE_kpl = 150000000;
     public static final long ONE_kpl = 100000000;
     public static final long MAX_BALANCE_NQT = MAX_BALANCE_kpl * ONE_kpl;
     public static final long INITIAL_BASE_TARGET = 153722867;
@@ -161,14 +161,14 @@ public final class Constants {
 
     public static final boolean correctInvalidFees = Kpl.getBooleanProperty("kpl.correctInvalidFees");
 
-    /*创始区块产生时间 2017-3-11 17:59:59*/
+    /*创始区块产生时间 2017-5-6 19:59:59*/
     public static final long EPOCH_BEGINNING;
     static {
         Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
         calendar.set(Calendar.YEAR, 2017); // 几年
-        calendar.set(Calendar.MONTH, 2);//Calendar.NOVEMBER （几－1）月
-        calendar.set(Calendar.DAY_OF_MONTH, 14); //几日
-        calendar.set(Calendar.HOUR_OF_DAY, -7); //（几－7）时
+        calendar.set(Calendar.MONTH, 4);//Calendar.NOVEMBER （几－1）月
+        calendar.set(Calendar.DAY_OF_MONTH, 6); //几日
+        calendar.set(Calendar.HOUR_OF_DAY, 12); //（几－7）时
         calendar.set(Calendar.MINUTE, 0);
         calendar.set(Calendar.SECOND, 0);
         calendar.set(Calendar.MILLISECOND, 0);

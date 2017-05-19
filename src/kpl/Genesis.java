@@ -2,7 +2,7 @@ package kpl;
 
 public final class Genesis {
 
-    public static final long GENESIS_BLOCK_ID = 6661098813318903015L;
+    public static final long GENESIS_BLOCK_ID = 106997055117569187L;
     public static final long CREATOR_ID       = 2912040837387052340L;
     public static final byte[] CREATOR_PUBLIC_KEY = {
             59, -81, 14, -82, -36, -88, 9, -21, 61, 69, -76, 106, -25, -67, 47, -49, 10,
@@ -33,7 +33,7 @@ public final class Genesis {
 
     public static final byte[] GENESIS_BLOCK_SIGNATURE = new byte[]{
             -36, 97, -50, -31, -62, 74, -108, -74, 16, -24, 102, -68, 96, 15, 112, 83, -69, -16, 78, 107, 53, -80, -78, 112, 57, 52, 89, -22, -66, -5, -46, 12, 88, -65, -2, 45, -67, -51, 92, 13, -10, 37, -59, 64, 43, -91, -65, -91, -105, -47, -16, -22, -102, -110, 41, 46, 76, 14, 127, 56, 82, 76, 78, 69
-};
+    };
 
     private Genesis() {} // never
 
