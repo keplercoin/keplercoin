@@ -168,7 +168,6 @@
                         pos.begin == pos.end && (k = input.val().charCodeAt(pos.begin - 1), pos.begin--,
                             pos.end--);
                     }
-
                     if (!input.prop("readonly")) {
                         var p, c, next, k = e.which || e.keyCode, pos = input.caret();
                         if (!(e.ctrlKey || e.altKey || e.metaKey || 32 > k) && k && 13 !== k) {
@@ -191,6 +190,7 @@
                     for (i = start; end > i && len > i; i++) tests[i] && (buffer[i] = getPlaceholder(i));
                 }
                 function writeBuffer() {
+
                     input.val(buffer.join(""));
                 }
                 function checkVal(allow) {
@@ -223,15 +223,17 @@
                         var newInput = input.val();
                         var pastedData = newInput.substring(4).toUpperCase();
                         if (/KPL\-[A-Z0-9]{4}\-[A-Z0-9]{4}\-[A-Z0-9]{4}\-[A-Z0-9]{5}/i.test(pastedData)) {
-                            var newAddress = String(pastedData.match("KPL-\-[A-Z0-9]{4}\-[A-Z0-9]{4}\-[A-Z0-9]{4}\-[A-Z0-9]{5}"));
-                            input.val(newAddress);
-                            checkVal(true);
+//                            var newAddress = String(pastedData.match("KPL-\-[A-Z0-9]{4}\-[A-Z0-9]{4}\-[A-Z0-9]{4}\-[A-Z0-9]{5}"));
+//                            input.val(newAddress);
+//                            checkVal(true);
+//                            var newAddress = String(pastedData.match("KPL-\-[A-Z0-9]{4}\-[A-Z0-9]{4}\-[A-Z0-9]{4}\-[A-Z0-9]{5}"));
+//                            input.val(newAddress);
+//                            checkVal(true);
                         } else if (/^KPL\-[A-Z0-9]{4}\-[A-Z0-9]{4}\-[A-Z0-9]{4}\-[A-Z0-9]{5}/i.test(newInput) || /^KPL[A-Z0-9]{17}/i.test(newInput)) {
                             input.mask("KPL-****-****-****-*****").trigger("checkRecipient")/*.unbind(".remask")*/;
                         }
                     }, 0);
                 });
-
                 input.data($.mask.dataName, function() {
                     return $.map(buffer, function(c, i) {
                         return tests[i] && c != getPlaceholder(i) ? c : null;
@@ -243,6 +245,7 @@
                         clearTimeout(caretTimeoutId);
                         focusText = input.val();
                         var pos = checkVal();
+                        pos = 0;
                         caretTimeoutId = setTimeout(function() {
                             input.get(0) === document.activeElement && (writeBuffer(), pos == mask.replace("?", "").length ? input.caret(0, pos) : input.caret(pos));
                         }, 10);
