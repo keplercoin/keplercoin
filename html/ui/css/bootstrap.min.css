@@ -112,7 +112,7 @@ code,kbd,pre,samp {
 button,input,optgroup,select,textarea {
     margin: 0;
     font: inherit;
-    color: inherit
+    color: #7acaef;
 }
 
 button {
@@ -1359,8 +1359,8 @@ body {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 14px;
     line-height: 1.42857143;
-    color: #333;
-    background-color: #fbf8ef
+    color: #edf6fa;
+    background-color: #edf6fa
 }
 
 button,input,select,textarea {
@@ -1375,7 +1375,7 @@ a {
 }
 
 a:focus,a:hover {
-    color: #23527c;
+    color: #edf6fa;
     text-decoration: underline
 }
 
@@ -2734,7 +2734,7 @@ th {
     padding: 8px;
     line-height: 1.42857143;
     vertical-align: top;
-    border-top: 1px solid #efe5ca
+    border-top: 1px solid #cce4f0
 }
 
 .table>thead>tr>th {
@@ -2895,7 +2895,6 @@ label {
     display: inline-block;
     max-width: 100%;
     margin-bottom: 5px;
-    font-weight: 700
 }
 
 input[type=search] {
@@ -2945,7 +2944,7 @@ output {
     font-size: 14px;
     line-height: 1.42857143;
     color: #7acaef;
-    background-color: #152529;
+    /*background-color: #152529;*/
     background-image: none;
     border: 1px solid #153b4a;
     border-radius: 0px;
@@ -3409,7 +3408,7 @@ select[multiple].form-group-lg .form-control,textarea.form-group-lg .form-contro
 }
 
 .btn.focus,.btn:focus,.btn:hover {
-    color: #333;
+    color: #b0def3;
     text-decoration: none
 }
 
@@ -3430,7 +3429,7 @@ select[multiple].form-group-lg .form-control,textarea.form-group-lg .form-contro
 }
 
 .btn-default {
-    color: #fbf8ef;
+    color: #edf6fa;
     background-color: #153b4a;
     border-color: #153b4a;
 }
@@ -3721,7 +3720,7 @@ tbody.collapse.in {
     font-size: 14px;
     text-align: left;
     list-style: none;
-    background-color: #fbf8ef;
+    background-color: #edf6fa;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     border: 1px solid #ccc;
@@ -4157,7 +4156,7 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 }
 
 .input-group-btn:last-child>.btn,.input-group-btn:last-child>.btn-group {
-    margin-left: -1px
+    margin-left: 0px
 }
 
 .nav {
@@ -4179,7 +4178,7 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 
 .nav>li>a:focus,.nav>li>a:hover {
     text-decoration: none;
-    background-color: #000
+    background-color: #153b4a
 }
 
 .nav>li.disabled>a {
@@ -4300,7 +4299,7 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 }
 
 .nav-pills>li.active>a,.nav-pills>li.active>a:focus,.nav-pills>li.active>a:hover {
-    color: #fbf8ef;
+    color: #edf6fa;
     background-color: #153b4a
 }
 
@@ -4316,7 +4315,6 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 .nav-justified {
     width: 100%;
     border-bottom: 1px solid #153b4a;
-    background-color: #f9f1da;
 }
 
 .nav-justified>li {
@@ -4753,8 +4751,7 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 }
 
 .navbar-default {
-    background-color: #f8f8f8;
-    border-color: #e7e7e7
+    background-color: #fff;
 }
 
 .navbar-default .navbar-brand {
@@ -5364,7 +5361,7 @@ a.thumbnail.active,a.thumbnail:focus,a.thumbnail:hover {
 }
 
 .alert-warning {
-    color: #8a6d3b;
+    color: #17b3f9;
     background-color: #000000;
     border-color: #153b4a;
 }
@@ -5727,7 +5724,7 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:focus,a.list-gro
 }
 
 .panel {
-    background: #152529;
+    background: #153b4a;
     border:1px solid #000000;
     margin-bottom: 20px!important;
     border-radius: 4px;
@@ -5911,7 +5908,7 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:focus,a.list-gro
 
 .panel-default>.panel-heading {
     color: #333;
-    background-color: #f5f5f5;
+    background-color: #e4f1f7;
     border-color: #ddd
 }
 
