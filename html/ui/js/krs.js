@@ -105,7 +105,7 @@ var krs = (function(krs, $, undefined) {
                     set_lang = "en";
                     window.language = "en";
             }
-            krs.updateSettings("language",set_lang);
+            krs.updateSettings("language","zh-cn");
         });
 		krs.sendRequest("getState", {
 			"includeCounts": "false"
