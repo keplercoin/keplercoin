@@ -307,7 +307,7 @@ public class AccountLedger {
      * @param   lastIndex                   Last matching entry index, inclusive
      * @return                              List of ledger entries
      */
-    public static List<LedgerEntry> getEntries(long accountId, LedgerEvent event, long eventId,
+    public static List<LedgerEntry> getEntries(long accountId,long accountAnotherId, LedgerEvent event, long assetID, long eventId,
                                                 LedgerHolding holding, long holdingId,
                                                 int firstIndex, int lastIndex) {
         if (!ledgerEnabled) {
@@ -318,12 +318,10 @@ public class AccountLedger {
         // Build the SELECT statement to search the entries
         StringBuilder sb = new StringBuilder(128);
         sb.append("SELECT * FROM account_ledger ");
-        if (accountId != 0 || event != null || holding != null) {
+        if (accountId != 0 || event != null || holding != null || accountAnotherId != 0) {
             sb.append("WHERE ");
         }
-        if (accountId != 0) {
-            sb.append("account_id = ? ");
-        }
+        sb.append("account_id = ? ");
         if (event != null) {
             if (accountId != 0) {
                 sb.append("AND ");
@@ -339,6 +337,33 @@ public class AccountLedger {
             sb.append("holding_type = ? ");
             if (holdingId != 0)
                 sb.append("AND holding_id = ? ");
+        }
+        if (accountAnotherId != 0) {
+            sb.append("AND height in(SELECT height FROM account_ledger ");
+            if (accountId != 0 || event != null || holding != null || accountAnotherId != 0) {
+                sb.append("WHERE ");
+            }
+            sb.append("account_id = ? ");
+            if (event != null && true) {
+                if (accountId != 0) {
+                    sb.append("AND ");
+                }
+                sb.append("event_type = ? ");
+                if (eventId != 0)
+                    sb.append("AND event_id = ? ");
+            }
+            if (holding != null && true) {
+                if (accountId != 0 || event != null) {
+                    sb.append("AND ");
+                }
+                sb.append("holding_type = ? ");
+                if (holdingId != 0)
+                    sb.append("AND holding_id = ? ");
+            }
+            sb.append(") ");
+        }
+        if(assetID != 0) {
+            sb.append(" AND holding_id = ? ");
         }
         sb.append("ORDER BY db_id DESC ");
         sb.append(DbUtils.limitsClause(firstIndex, lastIndex));
@@ -363,6 +388,25 @@ public class AccountLedger {
                 if (holdingId != 0) {
                     pstmt.setLong(++i, holdingId);
                 }
+            }
+            if (accountAnotherId != 0) {
+                pstmt.setLong(++i, accountAnotherId);
+
+                if (event != null) {
+                    pstmt.setByte(++i, (byte)event.getCode());
+                    if (eventId != 0) {
+                        pstmt.setLong(++i, eventId);
+                    }
+                }
+                if (holding != null) {
+                    pstmt.setByte(++i, (byte)holding.getCode());
+                    if (holdingId != 0) {
+                        pstmt.setLong(++i, holdingId);
+                    }
+                }
+            }
+            if(assetID != 0) {
+                pstmt.setLong(++i, assetID);
             }
             DbUtils.setLimits(++i, pstmt, firstIndex, lastIndex);
             try (ResultSet rs = pstmt.executeQuery()) {

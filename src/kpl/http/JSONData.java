@@ -114,6 +114,18 @@ public final class JSONData {
         return json;
     }
 
+    static JSONObject account(Account account) {
+        JSONObject json = new JSONObject();
+        json.put("id", account.getAccountId());
+        json.put("balance", account.getBalance());
+        json.put("unconfirmed_balance", account.getUnconfirmedUnits());
+        json.put("forged_blance", account.getForgedBlance());
+        json.put("active_lessee_id", account.getActiveLesseeID());
+        json.put("height", account.getHeight());
+        json.put("latest", account.getLatest());
+        return json;
+    }
+
     static JSONObject currency(Currency currency, boolean includeCounts) {
         JSONObject json = new JSONObject();
         json.put("currency", Long.toUnsignedString(currency.getId()));

@@ -50,7 +50,7 @@ import java.util.Properties;
 
 public final class Kpl {
 
-    public static final String VERSION = "1.0.4";
+    public static final String VERSION = "1.0.5";
     public static final String APPLICATION = "KRS";
 
     private static volatile Time time = new Time.EpochTime();
@@ -420,18 +420,18 @@ public final class Kpl {
     }
 
     private static void setSystemProperties() {
-        // Override system settings that the user has define in kpl.properties file.
-        String[] systemProperties = new String[] {
-                "socksProxyHost",
-                "socksProxyPort",
-        };
+      // Override system settings that the user has define in kpl.properties file.
+      String[] systemProperties = new String[] {
+        "socksProxyHost",
+        "socksProxyPort",
+      };
 
-        for (String propertyName : systemProperties) {
-            String propertyValue;
-            if ((propertyValue = getStringProperty(propertyName)) != null) {
-                System.setProperty(propertyName, propertyValue);
-            }
+      for (String propertyName : systemProperties) {
+        String propertyValue;
+        if ((propertyValue = getStringProperty(propertyName)) != null) {
+          System.setProperty(propertyName, propertyValue);
         }
+      }
     }
 
     private static void logSystemProperties() {

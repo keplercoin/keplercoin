@@ -83,7 +83,7 @@ public final class Constants {
     public static final int MAX_ASSET_DESCRIPTION_LENGTH = 1000;
     public static final int MAX_SINGLETON_ASSET_DESCRIPTION_LENGTH = 160;
     public static final int MAX_ASSET_TRANSFER_COMMENT_LENGTH = 1000;
-    public static final int MAX_DIVIDEND_PAYMENT_ROLLBACK = 1441;
+    public static final int MAX_DIVIDEND_PAYMENT_ROLLBACK = 50000; //1441 by xiaoc 2017-06-16 14:26
 
     public static final int MAX_POLL_NAME_LENGTH = 100;
     public static final int MAX_POLL_DESCRIPTION_LENGTH = 1000;
