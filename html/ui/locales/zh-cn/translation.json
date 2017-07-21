@@ -181,6 +181,7 @@
   "buyer":"买方",
   "calculate_full_hash":"计算完整哈希",
   "cancel":"取消",
+  "confirm_1":"确定",
   "cancel_alias_sale":"取消别名出售",
   "cancel_my_order":"取消我的订单",
   "cancel_sale":"取消出售",
@@ -1620,5 +1621,16 @@
   "unconfirmed_transactions_counter":"未确认的交易数目",
   "current_blockchain_height":"目前区块链高度",
   "server_connection_status":"服务器连接状态",
-  "cumulative_difficulty":"累积难度"
+  "cumulative_difficulty":"累积难度",
+  "bts_address":"您的BTS地址",
+  "recharge":"充值",
+  "recharge_src":"img/充值.png",
+  "record":"充值提现记录",
+  "bts_count":"金额(BTS)",
+  "kpl_count":"金额(KPL)",
+  "bts_address":"BTS地址",
+  "bts_gateway":"BTS网关",
+  "kpl_gateway":"KPL网关",
+   "gateway":"网关"
+
 }

@@ -208,6 +208,7 @@ var krs = (function(krs, $) {
     };
 
     krs.incoming.active_shufflings = function() {
+        console.log(88888888888888888888888888888888888888888888888888);
         krs.loadPage("active_shufflings");
     };
 

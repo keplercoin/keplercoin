@@ -130,7 +130,6 @@ var krs = (function(krs, $) {
 				};
 			}
 		}
-
 		krs.sendRequest("getAccount", {
 			"account": data.account_id
 		}, function(response) {
@@ -473,6 +472,5 @@ var krs = (function(krs, $) {
             }
         }
 	});
-
 	return krs;
 }(krs || {}, jQuery));

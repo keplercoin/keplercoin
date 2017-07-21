@@ -1073,6 +1073,8 @@ public final class Account {
     private long unconfirmedBalanceNQT;
     private long forgedBalanceNQT;
     private long activeLesseeId;
+    private long latest;
+    private long height;
     private Set<ControlType> controls;
 
     private Account(long id) {
@@ -1091,12 +1093,44 @@ public final class Account {
         this.unconfirmedBalanceNQT = rs.getLong("unconfirmed_balance");
         this.forgedBalanceNQT = rs.getLong("forged_balance");
         this.activeLesseeId = rs.getLong("active_lessee_id");
+        this.latest = rs.getLong("latest");
+        this.height = rs.getLong("height");
         if (rs.getBoolean("has_control_phasing")) {
             controls = Collections.unmodifiableSet(EnumSet.of(ControlType.PHASING_ONLY));
         } else {
             controls = Collections.emptySet();
         }
     }
+
+    /*by xiaoc*/
+    public long getAccountId() {
+        return this.id;
+    }
+
+    public long getBalance() {
+        return this.balanceNQT;
+    }
+
+    public long getUnconfirmedUnits() {
+        return this.unconfirmedBalanceNQT;
+    }
+
+    public long getForgedBlance() {
+        return this.forgedBalanceNQT;
+    }
+
+    public long getActiveLesseeID() {
+        return this.activeLesseeId;
+    }
+
+    public long getLatest() {
+        return this.latest;
+    }
+
+    public long getHeight() {
+        return this.height;
+    }
+    /*by xiaoc*/
 
     private void save(Connection con) throws SQLException {
         try (PreparedStatement pstmt = con.prepareStatement("MERGE INTO account (id, "
@@ -1273,6 +1307,11 @@ public final class Account {
         } catch (SQLException e) {
             throw new RuntimeException(e.toString(), e);
         }
+    }
+
+
+    public static DbIterator<Account> getAllAccount(int from, int to) {
+        return accountTable.getAll(from, to);
     }
 
     public DbIterator<Account> getLessors() {

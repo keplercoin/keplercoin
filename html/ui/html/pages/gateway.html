@@ -1,0 +1,42 @@
+<div id="gateway_page" class="paginated page bts">
+    <section id="tagged_data_top" class="content-header">
+        <h1>BTS网关</h1>
+        <div class="panel panel-default" style="margin-top: 30px;">
+            <div class="data-container data-loading panel-body" style="position: relative;">
+                <p>通过BTS网关，可以将您BTS中的资产充值到KPL中，页可以将KPL中的资产提现到您的BTS中。</p>
+                <p>资产充值通过BTS客户端实现，资产提现必须到您的BTS账户中的操作，详细充值步骤 <a href="javascript:;" class="btns-check">点击查看</a>。</p>
+                <div class="pics btn-deposit "><img class="imgs" data-i18n="[src]recharge_src"  alt="充值"><span>bts-kpl</span></div>
+                <div data-toggle="modal" data-target="#transfer_bts_gateway_modal" data-asset="15049503741327743349" data-name="BTS" data-decimals="5" data-action="withdraw_bts"  style=" cursor:pointer; text-align: center; line-height: 36px; position: absolute; right:30px; top: 10px; width: 121px; height: 36px; background: #17b3f9; color: #fff;">提现</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box box-primary">
+                    <div class="box-header"><h3 class="box-title" data-i18n="record">RECORD</h3></div>
+                    <div class="box-body no-padding">
+                        <div class="data-container data-loading1" data-no-padding="true" data-extra="#dashboard_transactions_footer">
+                            <table class="table table-striped" id="gateway_table">
+                                <thead>
+                                <tr>
+                                    <th data-i18n="date">Date</th>
+                                    <th data-i18n="type">Type</th>
+                                    <th data-i18n="address">Address</th>
+                                    <th data-i18n="bts_count">Count</th>
+                                    <th style="text-align:center;" data-i18n="height">Height</th>
+                                    <th style="text-align:center;" data-i18n="confirmations">Confirmations</th>
+                                </tr>
+                                </thead>
+                                <tbody id = 'create-box1'>
+
+                                </tbody>
+                            </table>
+                            <div class="data-loading-container"><img src="img/loading_indicator.gif" alt="Loading..." width="32" height="32" /></div>
+                            <div class="data-empty-container"><p data-i18n="no_transactions_yet">No transactions yet.</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="data-pagination"></div>
+            </div>
+        </div>
+    </section>
+</div>

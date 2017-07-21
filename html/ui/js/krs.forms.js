@@ -391,7 +391,7 @@ var krs = (function(krs, $) {
 				}
 			}
 		}
-
+		if ( requestType == "withdrawBts")  requestType = "transferAsset";
 		if (requestType == "sendMoney" || requestType == "transferAsset") {
 			var merchantInfo = $modal.find("input[name=merchant_info]").val();
 			if (merchantInfo) {

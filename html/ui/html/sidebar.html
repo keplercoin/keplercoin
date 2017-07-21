@@ -1,25 +1,30 @@
 <style>
-    #sidebar_monetary_system,
-    #sidebar_tagged_data,
-    #sidebar_dgs_buyer,
-    #sidebar_shuffling,
-    #sidebar_plugins,
-    #exchange_menu_li,
-    li[data-content="帮助"],
-    #header_transfer_currency{display:none!important;}
+    <!--#sidebar_monetary_system,-->
+    <!--#sidebar_tagged_data,-->
+    <!--#sidebar_dgs_buyer,-->
+    <!--#sidebar_shuffling,-->
+    <!--#sidebar_plugins,-->
+    <!--#exchange_menu_li,-->
+    <!--li[data-content="帮助"],-->
+    <!--#header_transfer_currency{display:none!important;}-->
+
 </style>
 <section class="sidebar">
     <div class="user-panel">
         <div class="pull-left info">
             <div class="pull-left info">
-                <div class="badge-active" style="padding:3px 0 10px 0;margin-bottom:5px;font-size:12px;color: #17acef; font-weight: bolder;" id="sidebar_account_id"></div>
+                <div class="badge-active"
+                     style="padding:3px 0 10px 0;margin-bottom:5px;font-size:12px;color: #17acef; font-weight: bolder;"
+                     id="sidebar_account_id"></div>
                 <div style="margin-bottom:5px;">
-                    <span><a class='btn btn-default btn-xs' href="#" id="account_name" data-toggle="modal" data-target="#account_info_modal" data-i18n="set_account_info">Set Account Info</a></span>
+                    <span><a class='btn btn-default btn-xs' href="#" id="account_name" data-toggle="modal"
+                             data-target="#account_info_modal" data-i18n="set_account_info">Set Account Info</a></span>
                     <span id="sidebar_account_link"></span>
                 </div>
                 <div style="margin-bottom:5px;">
                     <div id="account_id_dropdown" class="btn-group">
-                        <button type="button" class="btn btn-primary btn-xs" data-i18n="switch_account">Switch Account</button>
+                        <button type="button" class="btn btn-primary btn-xs" data-i18n="switch_account">Switch Account
+                        </button>
                         <button type="button" class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown">
                             <span class="caret"></span>
                         </button>
@@ -35,8 +40,13 @@
                     </div>
                 </div>
                 <div style="margin-bottom:8px;">
-                    <a href="#" data-page="peers" id="connected_indicator" class="connected goto-page" style="display:none;font-size:13px;" data-toggle="tooltip" data-placement="top" title="CONNECTION" data-i18n="[title]server_connection_status"><i class="fa fa-circle" style="font-size:12px;"></i> <span data-18n="connected">Connected</span></a>
-                    <a href="#" id="forging_indicator" class="forging" data-toggle="tooltip" title="" data-placement="bottom" style="display:none;font-size:13px;">
+                    <a href="#" data-page="peers" id="connected_indicator" class="connected goto-page"
+                       style="display:none;font-size:13px;" data-toggle="tooltip" data-placement="top"
+                       title="CONNECTION" data-i18n="[title]server_connection_status"><i class="fa fa-circle"
+                                                                                         style="font-size:12px;"></i>
+                        <span data-18n="connected">Connected</span></a>
+                    <a href="#" id="forging_indicator" class="forging" data-toggle="tooltip" title=""
+                       data-placement="bottom" style="display:none;font-size:13px;">
                         <i class="fa fa-circle" style="font-size:12px;"></i> <span data-18n="forging">Forging</span>
                     </a>
                 </div>
@@ -49,20 +59,24 @@
                 </div-->
                 <div class="input-group" style="margin-bottom:5px;">
                     <span data-i18n="height">HEIGHT</span>
-                    <span class="badge-active" style="padding:3px;" id="sidebar_block_link" data-toggle="tooltip" data-placement="bottom" title="HEIGHT" data-i18n="[title]current_blockchain_height"></span>
+                    <span class="badge-active" style="padding:3px;" id="sidebar_block_link" data-toggle="tooltip"
+                          data-placement="bottom" title="HEIGHT" data-i18n="[title]current_blockchain_height"></span>
                 </div>
             </div>
         </div>
     </div>
     <form action="#" method="get" class="sidebar-form" id="id_search" autocomplete="off">
         <div class="input-group">
-            <input type="text" name="q" class="form-control" placeholder="Search by ID..." data-i18n="[placeholder]search_by_id">
-            <span class="input-group-btn" style="background-color: #152529">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
+            <input type="text" name="q" class="form-control" placeholder="Search by ID..."
+                   data-i18n="[placeholder]search_by_id">
+            <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat" style="background: #f6f7f7;"><i
+                        class="fa fa-search"></i></button>
             </span>
         </div>
     </form>
     <ul class="sidebar-menu" id="sidebar_menu">
     </ul>
-    <div style="height:50px"></div> <!-- Dummy div, otherwise some browsers cut of the sidebar too high when scrolling on smaller screens -->
+    <div style="height:50px"></div>
+    <!-- Dummy div, otherwise some browsers cut of the sidebar too high when scrolling on smaller screens -->
 </section>

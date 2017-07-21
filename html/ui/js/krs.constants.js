@@ -88,6 +88,7 @@ var krs = (function (krs, $) {
     krs.loadServerConstants = function () {
         krs.sendRequest("getConstants", {}, function (response) {
             if (response.genesisAccountId) {
+                console.log('lalalallalalalalal',response);
                 krs.constants.SERVER = response;
                 krs.constants.VOTING_MODELS = response.votingModels;
                 krs.constants.MIN_BALANCE_MODELS = response.minBalanceModels;
@@ -101,6 +102,7 @@ var krs = (function (krs, $) {
                 krs.constants.EPOCH_BEGINNING = response.epochBeginning; //从后台获取创世区块时间
                 krs.constants.REQUEST_TYPES = response.requestTypes;
                 krs.constants.API_TAGS = response.apiTags;
+                //krs.constants.GATEWAY = response.apiTags;
                 krs.constants.SHUFFLING_STAGES = response.shufflingStages;
                 krs.constants.SHUFFLING_PARTICIPANTS_STATES = response.shufflingParticipantStates;
                 krs.constants.DISABLED_APIS = response.disabledAPIs;

@@ -751,17 +751,15 @@ var krs = (function (krs, $, undefined) {
 		}
 	};
 
-    krs.dataLoaded = function (data, noPageLoad) {
-		var $el = $("#" + krs.currentPage + "_contents");
-
+    krs.dataLoaded = function (data,noPageLoad) {
+		var $el = $("#" + krs.currentPage+ "_contents");
 		if ($el.length) {
 			$el.empty().append(data);
 		} else {
-			$el = $("#" + krs.currentPage + "_table");
+			$el = $("#" + krs.currentPage+ "_table");
 			$el.find("tbody").empty().append(data);
             $el.find('[data-toggle="tooltip"]').tooltip();
 		}
-
 		krs.dataLoadFinished($el);
 
 		if (!noPageLoad) {
@@ -943,7 +941,6 @@ var krs = (function (krs, $, undefined) {
             $.each(unconfirmedTransactions, function (key, val) {
 				unconfirmedTransactions[key] = krs.completeUnconfirmedTransactionDetails(val);
 			});
-
 			return unconfirmedTransactions;
 		}
 	};

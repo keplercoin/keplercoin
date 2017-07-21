@@ -256,6 +256,7 @@ var krs = (function (krs, $, undefined) {
         if (requestType.slice(-1) == "+") {
             requestType = requestType.slice(0, -1);
             currentPage = krs.currentPage;
+
         } else {
             //not really necessary... we can just use the above code..
             var plusCharacter = requestType.indexOf("+");

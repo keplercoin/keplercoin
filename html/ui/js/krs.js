@@ -105,7 +105,7 @@ var krs = (function(krs, $, undefined) {
                     set_lang = "en";
                     window.language = "en";
             }
-            krs.updateSettings("language",set_lang);
+            krs.updateSettings("language","zh-cn");
         });
 		krs.sendRequest("getState", {
 			"includeCounts": "false"
@@ -345,7 +345,6 @@ var krs = (function(krs, $, undefined) {
 		}
 
 		var page = $(this).data("page");
-
 		if (page == krs.currentPage) {
 			if (data && data.callback) {
 				data.callback();
@@ -459,7 +458,6 @@ var krs = (function(krs, $, undefined) {
 
 	krs.goToPage = function(page, callback, subpage) {
 		var $link = $("ul.sidebar-menu a[data-page=" + page + "]");
-
 		if ($link.length > 1) {
 			if ($link.last().is(":visible")) {
 				$link = $link.last();
@@ -493,7 +491,6 @@ var krs = (function(krs, $, undefined) {
 
 	krs.pageLoading = function() {
 		krs.hasMorePages = false;
-
 		var $pageHeader = $("#" + krs.currentPage + "_page .content-header h1");
 		$pageHeader.find(".loading_dots").remove();
 		$pageHeader.append("<span class='loading_dots'><span>.</span><span>.</span><span>.</span></span>");
@@ -501,13 +498,10 @@ var krs = (function(krs, $, undefined) {
 
 	krs.pageLoaded = function(callback) {
 		var $currentPage = $("#" + krs.currentPage + "_page");
-
 		$currentPage.find(".content-header h1 .loading_dots").remove();
-
 		if ($currentPage.hasClass("paginated")) {
 			krs.addPagination();
 		}
-
 		if (callback) {
 			try {
                 callback();
@@ -515,7 +509,7 @@ var krs = (function(krs, $, undefined) {
 		}
 	};
 
-krs.addPagination = function () {
+    krs.addPagination = function () {
         var firstStartNr = 1;
 		var firstEndNr = krs.itemsPerPage;
 		var currentStartNr = (krs.pageNumber-1) * krs.itemsPerPage + 1;
@@ -558,15 +552,14 @@ krs.addPagination = function () {
 
 		var output = prevHTML + firstHTML + currentHTML + nextHTML;
 		var $paginationContainer = $("#" + krs.currentPage + "_page .data-pagination");
-
 		if ($paginationContainer.length) {
 			$paginationContainer.html(output);
 		}
+
 	};
 
 	$(document).on("click", ".data-pagination a", function(e) {
 		e.preventDefault();
-
 		krs.goToPageNumber($(this).data("page"));
 	});
 
@@ -575,12 +568,9 @@ krs.addPagination = function () {
 			return;
 		}*/
 		krs.pageNumber = pageNumber;
-
 		krs.pageLoading();
-
 		krs.pages[krs.currentPage]();
 	};
-
 	function initUserDB() {
 		krs.storageSelect("data", [{
 			"id": "asset_exchange_version"
@@ -1497,9 +1487,7 @@ krs.addPagination = function () {
 
 	$("#id_search").on("submit", function(e) {
 		e.preventDefault();
-
 		var id = $.trim($("#id_search").find("input[name=q]").val());
-
 		if (/KPL\-/i.test(id)) {
 			krs.sendRequest("getAccount", {
 				"account": id

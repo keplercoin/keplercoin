@@ -22,7 +22,7 @@ var krs = (function(krs, $) {
         var $recipientFields = $("#send_money_recipient, #transfer_asset_recipient, #transfer_currency_recipient, " +
         "#send_message_recipient, #add_contact_account_id, #update_contact_account_id, #lease_balance_recipient, " +
         "#transfer_alias_recipient, #sell_alias_recipient, #set_account_property_recipient, #delete_account_property_recipient, " +
-		"#add_monitored_account_recipient");
+		"#add_monitored_account_recipient，#transfer_kpl_gateway_recipient，#transfer_bts_gateway_recipient");
 
 		$recipientFields.on("blur", function() {
 			$(this).trigger("checkRecipient");
@@ -46,7 +46,6 @@ var krs = (function(krs, $) {
 			callout.removeClass("callout-info callout-danger callout-warning").addClass("callout-danger").html($.t("error_numeric_ids_not_allowed")).show();
 		});
 	};
-
 	$("#send_message_modal, #send_money_modal, #transfer_currency_modal, #add_contact_modal, #set_account_property_modal, #delete_account_property_modal").on("show.bs.modal", function(e) {
 		var $invoker = $(e.relatedTarget);
 		var account = $invoker.data("account");

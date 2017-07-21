@@ -181,6 +181,7 @@
   "buyer": "Buyer",
   "calculate_full_hash": "Calculate Full Hash",
   "cancel": "Cancel",
+  "confirm_1":"Confirm",
   "cancel_alias_sale": "Cancel Alias Sale",
   "cancel_my_order": "Cancel My Order",
   "cancel_sale": "Cancel Sale",
@@ -1786,5 +1787,16 @@
   "end_height": "End Height",
   "end_time": "End Time",
   "distribution_starts_in": "Distribution starts in __interval__",
-  "distribution_ends_in": "Distribution ends in __interval__"
+  "distribution_ends_in": "Distribution ends in __interval__",
+  "bts_address":"Your BTS address",
+  "recharge":"Recharge",
+  "recharge_src":"img/充值-英文.png",
+  "record":"Recharge withdrawal record",
+  "bts_count":"Count(BTS)",
+  "kpl_count":"Count(KPL)",
+  "bts_address":"BTS Address",
+  "bts_gateway":"BTS Gateway",
+  "kpl_gateway":"KPL Gateway",
+  "gateway":"Gateway"
+
 }

@@ -490,9 +490,9 @@ var krs = (function(krs, $, undefined) {
 		}
 	};
 
+
     krs.getTransactionRowHTML = function(t, actions, decimals) {
 		var transactionType = $.t(krs.transactionTypes[t.type]['subTypes'][t.subtype]['i18nKeyTitle']);
-
 		if (t.type == 1 && t.subtype == 6 && t.attachment.priceNQT == "0") {
 			if (t.sender == krs.account && t.recipient == krs.account) {
 				transactionType = $.t("alias_sale_cancellation");
@@ -500,7 +500,6 @@ var krs = (function(krs, $, undefined) {
 				transactionType = $.t("alias_transfer");
 			}
 		}
-
 		var amount = "";
 		var sign = 0;
 		var fee = new BigInteger(t.feeNQT);
@@ -553,8 +552,8 @@ var krs = (function(krs, $, undefined) {
 		html += krs.getTransactionIconHTML(t.type, t.subtype) + '&nbsp; ';
 		html += '<span style="font-size:11px;display:inline-block;margin-top:5px;">' + transactionType + '</span>';
 		html += '</td>';
-        html += "<td style='vertical-align:middle;text-align:right;" + amountColor + "'>" + formattedAmount + "</td>";
-        html += "<td style='vertical-align:middle;text-align:right;" + feeColor + "'>" + formattedFee + "</td>";
+        html += "<td style='vertical-align:middle;" + amountColor + "'>" + formattedAmount + "</td>";
+        html += "<td style='vertical-align:middle;" + feeColor + "'>" + formattedFee + "</td>";
 		html += "<td style='vertical-align:middle;'>" + ((krs.getAccountLink(t, "sender") == "/" && t.type == 2) ? "Asset Exchange" : krs.getAccountLink(t, "sender")) + " ";
 		html += "<i class='fa fa-arrow-circle-right' style='color:#777;'></i> " + ((krs.getAccountLink(t, "recipient") == "/" && t.type == 2) ? "Asset Exchange" : krs.getAccountLink(t, "recipient")) + "</td>";
 		html += "<td class='td_transaction_phasing' style='min-width:100px;vertical-align:middle;text-align:center;'></td>";
@@ -837,6 +836,7 @@ var krs = (function(krs, $, undefined) {
 
         krs.sendRequest("getAccountLedger+", params, function(response) {
             if (response.entries && response.entries.length) {
+                    console.log(response.entries.length);
                 if (response.entries.length > krs.itemsPerPage) {
                     krs.hasMorePages = true;
                     response.entries.pop();
@@ -1057,6 +1057,8 @@ var krs = (function(krs, $, undefined) {
 			$(this).text($.t('hide_type_menu', 'Hide Type Menu'));
 		}
 	});
+
+
 
 	return krs;
 }(krs || {}, jQuery));

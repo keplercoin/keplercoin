@@ -1070,6 +1070,7 @@ var krs = (function (krs, $, undefined) {
                         var t = response.transactions[i];
                         t.confirmed = true;
                         rows += krs.getTransactionRowHTML(t, ['approve'], decimals);
+
                     }
                 } else {
                     $('#ar_currency_no_entries').html($.t('no_current_approval_requests', 'No current approval requests'));

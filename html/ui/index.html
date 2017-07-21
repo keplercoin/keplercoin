@@ -65,7 +65,6 @@
 <script src="js/krs.constants.js" type="text/javascript"></script>
 <script src="js/krs.sitebuild.js" type="text/javascript"></script>
 <script src="js/krs.simpleview.js" type="text/javascript"></script>
-
 <script type="text/javascript">
             krs.loadLockscreenHTML("html/lockscreen.html");
             krs.loadHeaderHTML("html/header.html");
@@ -91,8 +90,9 @@
             krs.loadPageHTML("html/pages/account_properties.html");
             krs.loadPageHTML("html/pages/tagged_data.html");
             krs.loadPageHTML("html/pages/monitors.html");
+            krs.loadPageHTML("html/pages/gateway.html");
+            krs.loadPageHTML("html/pages/gateway_kpl.html");
             krs.loadPageHTMLTemplates();
-
             krs.loadModalHTML("html/modals/krs.html");
             krs.loadModalHTML("html/modals/transactions.html");
             krs.loadModalHTML("html/modals/balanceleasing.html");
@@ -170,6 +170,7 @@
 <script src="js/krs.util.js" type="text/javascript"></script>
 <script src="js/krs.shape.shift.js" type="text/javascript"></script>
 <script src="js/krs.shuffling.js" type="text/javascript"></script>
+<script src="js/krs.gateway.js" type="text/javascript"></script>
 <script src="js/krs.accountproperties.js" type="text/javascript"></script>
 <script src="js/krs.taggeddata.js" type="text/javascript"></script>
 <script src="js/krs.header.js" type="text/javascript"></script>
@@ -177,6 +178,7 @@
 <script src="js/krs.feature.detection.js" type="text/javascript"></script>
 <script src="js/krs.javabridge.js" type="text/javascript"></script>
 <script src="js/krs.monitors.js" type="text/javascript"></script>
+
 <script type="text/javascript">
             $.i18n.init({
                 fallbackLng: "en",
@@ -188,9 +190,6 @@
             }, function() {
                 $("[data-i18n]").i18n();
             });
-</script>
-<script>
-    $('#search-btn').css('background','#152529');
 </script>
 </body>
 </html>

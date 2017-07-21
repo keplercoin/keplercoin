@@ -228,8 +228,8 @@ public class GetAccountLedger extends APIServlet.APIRequestHandler {
      * Create the GetAccountLedger instance
      */
     private GetAccountLedger() {
-        super(new APITag[] {APITag.ACCOUNTS}, "account", "firstIndex", "lastIndex",
-                "eventType", "event", "holdingType", "holding", "includeTransactions", "includeHoldingInfo");
+        super(new APITag[] {APITag.ACCOUNTS}, "account","accountAnother", "firstIndex", "lastIndex",
+                "eventType", "assetID" ,"event", "holdingType", "holding", "includeTransactions", "includeHoldingInfo");
     }
 
     /**
@@ -245,9 +245,11 @@ public class GetAccountLedger extends APIServlet.APIRequestHandler {
         // Process the request parameters
         //
         long accountId = ParameterParser.getAccountId(req, "account", false);
+        long accountAnotherId = ParameterParser.getAccountId(req, "accountAnother", false);
         int firstIndex = ParameterParser.getFirstIndex(req);
         int lastIndex = ParameterParser.getLastIndex(req);
         String eventType = Convert.emptyToNull(req.getParameter("eventType"));
+        long assetID = ParameterParser.getAccountId(req, "assetID", false);
         LedgerEvent event = null;
         long eventId = 0;
         if (eventType != null) {
@@ -275,7 +277,7 @@ public class GetAccountLedger extends APIServlet.APIRequestHandler {
         //
         // Get the ledger entries
         //
-        List<LedgerEntry> ledgerEntries = AccountLedger.getEntries(accountId, event, eventId,
+        List<LedgerEntry> ledgerEntries = AccountLedger.getEntries(accountId, accountAnotherId, event, assetID, eventId,
                                                                    holding, holdingId, firstIndex, lastIndex);
         //
         // Return the response

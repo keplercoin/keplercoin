@@ -67,8 +67,8 @@ var krs = (function(krs, $) {
 
 		$("#krs_update_explanation").find("> span").hide();
 		$("#krs_update_explanation_wait").attr("style", "display: none !important");
-		$(".krs_new_version_nr").html(krs.krsVersion.versionNr).show();
-		$(".krs_beta_version_nr").html(krs.krsBetaVersion.versionNr).show();
+		$(".krs_new_version_nr").html(krs.krsVersion&&krs.krsVersion.versionNr).show();
+		$(".krs_beta_version_nr").html(krs.krsBetaVersion&&krs.krsBetaVersion.versionNr).show();
 
 		if (installVersusNormal == -1 && installVersusBeta == -1) {
 			krs.isOutdated = true;

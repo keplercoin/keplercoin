@@ -1345,6 +1345,7 @@ var krs = (function (krs, $, undefined) {
             "firstIndex": krs.pageNumber * krs.itemsPerPage - krs.itemsPerPage,
             "lastIndex": krs.pageNumber * krs.itemsPerPage
         }, function (response) {
+            console.log(response);
             if (response.trades && response.trades.length) {
                 if (response.trades.length > krs.itemsPerPage) {
                     krs.hasMorePages = true;
@@ -1417,6 +1418,7 @@ var krs = (function (krs, $, undefined) {
                         "</tr>";
                 }
                 krs.dataLoaded(rows);
+
             } else {
                 krs.dataLoaded();
             }
@@ -1712,6 +1714,7 @@ var krs = (function (krs, $, undefined) {
     krs.forms.transferAsset = function ($modal) {
         return transferOrDeleteShares($modal);
     };
+
 
     krs.forms.deleteAssetShares = function ($modal) {
         return transferOrDeleteShares($modal);

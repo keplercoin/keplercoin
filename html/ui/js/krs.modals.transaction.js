@@ -35,7 +35,6 @@ var krs = (function (krs, $, undefined) {
         }
         krs.showTransactionModal(transactionId, isModalVisible, sharedKey);
     });
-
     krs.showTransactionModal = function (transaction, isModalVisible, sharedKey) {
         if (krs.fetchingModalData) {
             return;

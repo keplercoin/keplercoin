@@ -393,7 +393,7 @@
                                 <label for="dividend_payment_amount_per_share"><span data-i18n="amount_per_share">AMOUNT PER SHARE</span></label>
                                 <div class="input-group">
                                     <input type="number" name="amountKPLPerShare" id="dividend_payment_amount_per_share" class="form-control" placeholder="" step="any" tabindex="1">
-                                    <span class="input-group-addon">KPL</span>
+                                    <span class="input-group-addon"></span>
                                 </div>
                             </div>
                         </div>
@@ -419,9 +419,174 @@
             </div>
             <div class="modal-footer" style="margin-top:0;">
                 <div class="advanced_info"><a href="#" data-i18n="advanced">advanced</a></div>
-
                 <button type="button" class="btn btn-default" data-dismiss="modal" data-i18n="cancel">Cancel</button>
                 <button type="button" class="btn btn-primary" data-loading-text="Submitting..." data-i18n="pay_dividends;[data-loading-text]submitting">Pay Dividends</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="transfer_bts_gateway_modal" data-transaction-type="2" data-transaction-subtype="1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title"  data-i18n="withdrawal"></h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" autocomplete="off">
+                    <div class="callout callout-danger error_message" style="display:none"></div>
+                    <div class="form-group">
+                        <label data-i18n="asset">ASSET</label>
+                        <p><span id="deposit_asset_name"></span><span id="deposit_asset_available" style="font-style:italic"></span></p>
+                        <input type="hidden" name="asset" id="deposit_asset_asset" value="" />
+                        <input type="hidden" name="decimals" id="deposit_asset_decimals" value="" />
+                        <input type="hidden" id="deposit_asset_action" value="" />
+                    </div>
+                    <!--<div id="deposit_asset_recipient_container" >-->
+                        <!--<div data-replace-with-modal-template="recipient_modal_template"></div>-->
+                    <!--</div>-->
+                    <div class="form-group">
+                        <label for="transfer_asset_quantity" data-i18n="quantity">QUANTITY</label>
+                        <div class="input-group">
+                            <input type="number" name="quantity" id="deposit_asset_quantity" class="form-control" step="any" min="0" placeholder="Quantity" data-i18n="[placeholder]quantity" tabindex="3">
+                            <span class="input-group-addon" id="deposit_asset_quantity_name"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bts_fee" data-i18n="fee">FEE</label>
+                        <div class="input-group">
+                            <input type="input" name="feeKPL" id="bts_fee" class="form-control" step="any" placeholder="fee" data-i18n="[placeholder]fee" tabindex="100">
+                            <span class="input-group-addon">KPL</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="transfer_bts_gateway_message" data-i18n="address">ADDRESS</label>
+                        <input type="text" name="message" id="transfer_bts_gateway_message" class="form-control" placeholder="bts_address" data-i18n="[placeholder]bts_address" tabindex="103">
+                        <div style="display:none" id="transfer_bts_gateway_to_specific_account_message_options">
+                            <label for="transfer_bts_gateway_encrypt_message">
+                                <input type="checkbox" name="encrypt_message" id="transfer_bts_gateway_encrypt_message" value="1" checked="checked">
+                            </label>
+                        </div>
+                    </div>
+                    <div data-replace-with-modal-template="secret_phrase_modal_template"></div>
+                    <div data-replace-with-modal-template="advanced_deadline_template"></div>
+                    <div data-replace-with-modal-template="advanced_approve_template"></div>
+                    <div data-replace-with-modal-template="advanced_rt_hash_template"></div>
+                    <div data-replace-with-modal-template="advanced_broadcast_template"></div>
+                    <div data-replace-with-modal-template="advanced_note_to_self_template"></div>
+                    <input type="hidden" id="deposit_asset_request_type" name="request_type"/>
+                    <input type="hidden" id="deposit_encrypt_message" name="encrypt_message" value="1"/>
+                    <input type="hidden" name="converted_account_id" value="" />
+                    <input type="hidden" name="merchant_info" value="" data-default="" />
+                </form>
+            </div>
+            <div class="modal-footer" style="margin-top:0;">
+                <!--<div class="advanced_info"><a href="#" data-i18n="advanced">advanced</a></div>-->
+                <button type="button" class="btn btn-default" data-dismiss="modal" data-i18n="cancel">Cancel</button>
+                <button type="button" id="deposit_asset_button" class="btn btn-primary" data-loading-text="Submitting..." data-i18n="confirm_1"></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="transfer_kpl_gateway_modal" data-transaction-type="2" data-transaction-subtype="1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title"  data-i18n="recharge"></h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" autocomplete="off">
+                    <div class="callout callout-danger error_message" style="display:none"></div>
+                    <div class="form-group">
+                        <label data-i18n="asset">ASSET</label>
+                        <p><span id="recharge_asset_name">KPL</span><span id="recharge_asset_available" name="" value="" style="font-style:italic"></span></p>
+                        <input type="hidden" id="recharge_asset_action" value="" />
+                    </div>
+                    <div class="form-group">
+                        <label for="transfer_asset_quantity" data-i18n="quantity">QUANTITY</label>
+                        <div class="input-group">
+                            <input type="number" name="amountKPL" id="send_kpl_quantity" class="form-control" step="any" min="0" placeholder="Quantity" data-i18n="[placeholder]quantity" tabindex="3">
+                            <span class="input-group-addon" id="recharge_asset_quantity_name">KPL</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="{{name}}_fee" data-i18n="fee">FEE</label>
+                        <div class="input-group">
+                            <input type="input" name="feeKPL" id="{{name}}_fee" class="form-control" step="any" placeholder="fee" data-i18n="[placeholder]fee" tabindex="100">
+                            <span class="input-group-addon">KPL</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="transfer_kpl_gateway_message" data-i18n="bts_address">ADDRESS</label>
+                        <input type="text" name="message" id="transfer_kpl_gateway_message" class="form-control" placeholder="bts_address" data-i18n="[placeholder]bts_address" tabindex="103">
+                    </div>
+                    <input type="hidden" name="merchant_info" value="" data-default="" />
+                    <input type="hidden" name="add_message" value="on" data-default="" />
+                    <input type="hidden" name="request_type" value="sendMoney" data-default="sendMoney">
+                    <input type="hidden" name="recipient"  value="KPL-B66M-LXYN-EWUK-GUTBQ" data-default="KPL-B66M-LXYN-EWUK-GUTBQ">
+                    <input type="hidden" name="converted_account_id" value="" />
+                    <input type="hidden" name="encrypt_message" value="1" data-default="" />
+                    <input type="hidden" name="recipientPublicKey" value="" data-default="" />
+                    <div data-replace-with-modal-template="secret_phrase_modal_template"></div>
+                    <div data-replace-with-modal-template="advanced_deadline_template"></div>
+                    <div data-replace-with-modal-template="advanced_approve_template"></div>
+                    <div data-replace-with-modal-template="advanced_rt_hash_template"></div>
+                    <div data-replace-with-modal-template="advanced_broadcast_template"></div>
+                    <div data-replace-with-modal-template="advanced_note_to_self_template"></div>
+                </form>
+            </div>
+            <div class="modal-footer" style="margin-top:0;">
+                <button type="button" class="btn btn-default" data-dismiss="modal" data-i18n="cancel">Cancel</button>
+                <button type="button" id="recharge_asset_button" class="btn btn-primary" data-loading-text="Submitting..." data-i18n="confirm_1"></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="address_info_modal" tabindex="-1" role="dialog" aria-hidden="true" data-transaction-type="2" data-transaction-subtype="1" tabindex="-1"  aria-hidden="true" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="transaction_info_modal_transaction" data-i18n="">地址信息</h4>
+            </div>
+            <div class="modal-body" id="keepVal">
+                   <div id="decrypt_note_form_container1" class="decryptBox">
+                    <form role="form" style="background:#f6f6f6;margin-bottom:10px;padding:10px;border:1px solid #999;border-radius:5px;" autocomplete="off">
+                        <div id="decrypt_note_secret_phrase_div">
+                            <div class="form-group secret_phrase">
+                                <label for="decrypt_note_form_password" data-i18n="phrase">PASSPHRASE</label>
+                                <input type="password" name="secretPhrase" id="decrypt_note_form_password" class="form-control" placeholder="" tabindex="8">
+                            </div>
+                            <div style="margin-bottom:10px"><input type="checkbox" name="rememberPassword" id="decrypt_note_remember_password"/>
+                                &nbsp
+                                <label for="decrypt_note_remember_password" style="font-weight:normal;" data-i18n="remember_decryption_passphrase">Remember passphrase for decryption</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="decrypt_note_form_shared_key" data-i18n="shared_key">Shared Key</label>
+                            <input name="sharedKey" id="decrypt_note_form_shared_key" class="form-control" tabindex="9">
+                        </div>
+                        <button type="button" class="btn btn-primary" data-ignore="true" data-i18n="decrypt" id="decrypt" >Decrypt</button>
+                     </form>
+                </div>
+                <div id="info_show" class="decryptBox" style="display:none">
+                    <label>
+                        <i class="fa fa-unlock">加密信息</i>
+                        <div class="message1"></div>
+                        <div>
+                            <label>Shared Key</label> <br>
+                            <span class="sharedkey1"></span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="modal-footer" style="margin-top:0;">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" data-i18n="close">Close</button>
             </div>
         </div>
     </div>

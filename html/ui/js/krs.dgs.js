@@ -378,10 +378,10 @@ var krs = (function(krs, $) {
 			"page": 'purchased_dgs'
 		};
 		krs.appendMenuItemToTSMenuItem(sidebarId, options);
-		options = {
-			"titleHTML": '<span data-i18n="my_store">My Store</span>'
-		};
-		krs.appendSubHeaderToTSMenuItem(sidebarId, options);
+		// options = {
+		// 	"titleHTML": '<span data-i18n="my_store">My Store</span>'
+		// };
+		// krs.appendSubHeaderToTSMenuItem(sidebarId, options);
 		options = {
 			"titleHTML": '<span data-i18n="my_products_for_sale">My Products For Sale</span>',
 			"type": 'PAGE',

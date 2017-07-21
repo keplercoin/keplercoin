@@ -6,10 +6,10 @@
             <style>
                 .xioac-logo{vertical-align: middle; margin: 0 10px;}
                 .xiaoc-box{ width: 380px; height: 280px; background:rgba(23, 179, 249, 0.61); padding: 10px; margin: 0 auto; box-shadow: 0 0 140px #000000; border-radius: 18px;}
-                .xiaoc-content{ width: 360px; height: 260px; background-color: #000;position: relative; border-radius: 12px;}
-                .xiaoc-title{ font-size: 28px; text-align: center; margin: 0; padding: 20px 0; color: #17b3f9;}
-                .xiaoc-input{ border: 1px solid #17b3f9; padding: 5px; background:#131618;  width: 300px; height: 80px; position: absolute; left: 50%; top:50%; z-index: 1; margin-left: -150px; margin-top: -40px;}
-                .xiaoc-input>textarea{ width: 100%; background: none; outline: none; height: 100%; border: 0;resize: none; line-height:22px;  font-size: 16px; color: #17b3f9; font-weight: 400;}
+                .xiaoc-content{ width: 360px; height: 260px; background-color: #fff;position: relative; border-radius: 12px;}
+                .xiaoc-title{ font-size: 28px; text-align: center; margin: 0; padding: 20px 0; color: #171b1d;}
+                .xiaoc-input{ border: 1px solid #171b1d; padding: 5px; background:#f5f7f7;  width: 300px; height: 80px; position: absolute; left: 50%; top:50%; z-index: 1; margin-left: -150px; margin-top: -40px;}
+                .xiaoc-input>textarea{ width: 100%; background: none; outline: none; height: 100%; border: 0;resize: none; line-height:22px;  font-size: 16px; color: #171b1d; font-weight: 400;}
                 .xiaoc-btn-login{ cursor: pointer; display: block; width: 300px; height: 44px; background-color: #17b3f9; color: #fff; font-size: 14px; position:absolute; left: 50%; margin-left: -150px; bottom: 23px; text-align: center; line-height: 44px;}
                 .xiaoc-btn-login:hover{ background-color: #57c4f5; color: #fff;}
                 .xiaoc-btn-login:active{ background-color: #17b3f9; color: #fff;}
@@ -79,22 +79,22 @@
                         <!--
                         // canvas();
 
-                        //配置
-                        var config = {
-                            vx: 4,//点x轴速度,正为右，负为左
-                            vy:  4,//点y轴速度
-                            height: 6,//点高宽，其实为正方形，所以不宜太大
-                            width: 6,
-                            count: 250,//点个数
-                            color: "90,191,232",//点颜色
-                            stroke: "90,191,232",//线条颜色
-                            dist: 6000,//点吸附距离
-                            e_dist: 20000,//鼠标吸附加速距离
-                            max_conn: 100//点到点最大连接数
-                        };
-                        //调用
-                        var browser=navigator.appName;
-                        if(!browser || browser.indexOf("Microsoft Internet Explorer")<0) CanvasParticle(config);
+                        <!--//配置-->
+                        <!--var config = {-->
+                            <!--vx: 4,//点x轴速度,正为右，负为左-->
+                            <!--vy:  4,//点y轴速度-->
+                            <!--height: 6,//点高宽，其实为正方形，所以不宜太大-->
+                            <!--width: 6,-->
+                            <!--count: 250,//点个数-->
+                            <!--color: "90,191,232",//点颜色-->
+                            <!--stroke: "90,191,232",//线条颜色-->
+                            <!--dist: 6000,//点吸附距离-->
+                            <!--e_dist: 20000,//鼠标吸附加速距离-->
+                            <!--max_conn: 100//点到点最大连接数-->
+                        <!--};-->
+                        <!--//调用-->
+                        <!--var browser=navigator.appName;-->
+                        <!--if(!browser || browser.indexOf("Microsoft Internet Explorer")<0) CanvasParticle(config);-->
 
                         $("body").css({
                             "overflow":"hidden"

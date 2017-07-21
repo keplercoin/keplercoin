@@ -216,6 +216,7 @@ var krs = (function(krs, $) {
 				"firstIndex": krs.pageNumber * krs.itemsPerPage - krs.itemsPerPage,
 				"lastIndex": krs.pageNumber * krs.itemsPerPage
 			}, function(response) {
+			   console.log(response);
 				if (response.blocks && response.blocks.length) {
 					if (response.blocks.length > krs.itemsPerPage) {
 						krs.hasMorePages = true;
