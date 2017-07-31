@@ -5,3 +5,4 @@ else
     JAVA=java
 fi
 ${JAVA} -cp classes:lib/*:conf:addons/classes kpl.Kpl
+
