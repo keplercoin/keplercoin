@@ -14,9 +14,9 @@ find src/kpl/ -name "*.java" > sources.tmp
 javac -Xlint:unchecked -encoding utf8 -sourcepath "${SP}" -classpath "${CP}" -d classes/ @sources.tmp || exit 1
 echo "kpl core class files compiled successfully"
 
-echo "compiling kpl desktop..."
-find src/kpldesktop/ -name "*.java" > sources.tmp
-javac -Xlint:unchecked -encoding utf8 -sourcepath "${SP}" -classpath "${CP}" -d classes/ @sources.tmp
+#echo "compiling kpl desktop..."
+#find src/kpldesktop/ -name "*.java" > sources.tmp
+#javac -Xlint:unchecked -encoding utf8 -sourcepath "${SP}" -classpath "${CP}" -d classes/ @sources.tmp
 if [ $? -eq 0 ]; then
     echo "kpl desktop class files compiled successfully"
 else
